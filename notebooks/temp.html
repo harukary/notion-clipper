@@ -1,0 +1,2899 @@
+<!DOCTYPE html>
+<html
+  lang="ja"
+
+data-admin-domain="//blog.hatena.ne.jp"
+data-admin-origin="https://blog.hatena.ne.jp"
+data-author="juu7g"
+data-avail-langs="ja en"
+data-blog="juu7g.hatenablog.com"
+data-blog-host="juu7g.hatenablog.com"
+data-blog-is-public="1"
+data-blog-name="プログラムでおかえしできるかな"
+data-blog-owner="juu7g"
+data-blog-show-ads="1"
+data-blog-show-sleeping-ads=""
+data-blog-uri="https://juu7g.hatenablog.com/"
+data-blog-uuid="26006613703948645"
+data-blogs-uri-base="https://juu7g.hatenablog.com"
+data-brand="hatenablog"
+data-data-layer="{&quot;hatenablog&quot;:{&quot;admin&quot;:{},&quot;analytics&quot;:{&quot;brand_property_id&quot;:&quot;&quot;,&quot;measurement_id&quot;:&quot;G-VHWWZFZ821&quot;,&quot;non_sampling_property_id&quot;:&quot;&quot;,&quot;property_id&quot;:&quot;UA-195051091-1&quot;,&quot;separated_property_id&quot;:&quot;UA-29716941-19&quot;},&quot;blog&quot;:{&quot;blog_id&quot;:&quot;26006613703948645&quot;,&quot;content_seems_japanese&quot;:&quot;true&quot;,&quot;disable_ads&quot;:&quot;&quot;,&quot;enable_ads&quot;:&quot;true&quot;,&quot;enable_keyword_link&quot;:&quot;true&quot;,&quot;entry_show_footer_related_entries&quot;:&quot;false&quot;,&quot;force_pc_view&quot;:&quot;true&quot;,&quot;is_public&quot;:&quot;true&quot;,&quot;is_responsive_view&quot;:&quot;true&quot;,&quot;is_sleeping&quot;:&quot;false&quot;,&quot;lang&quot;:&quot;ja&quot;,&quot;name&quot;:&quot;\u30d7\u30ed\u30b0\u30e9\u30e0\u3067\u304a\u304b\u3048\u3057\u3067\u304d\u308b\u304b\u306a&quot;,&quot;owner_name&quot;:&quot;juu7g&quot;,&quot;uri&quot;:&quot;https://juu7g.hatenablog.com/&quot;},&quot;brand&quot;:&quot;hatenablog&quot;,&quot;page_id&quot;:&quot;entry&quot;,&quot;permalink_entry&quot;:{&quot;author_name&quot;:&quot;juu7g&quot;,&quot;categories&quot;:&quot;Notion\t\u30d6\u30ed\u30b0\tPython\tIT&quot;,&quot;character_count&quot;:21037,&quot;date&quot;:&quot;2022-08-20&quot;,&quot;entry_id&quot;:&quot;4207112889910427859&quot;,&quot;first_category&quot;:&quot;Notion&quot;,&quot;hour&quot;:&quot;20&quot;,&quot;title&quot;:&quot;\u3016\u5b9f\u8df5\u3017Notion API \u306e\u4f7f\u3044\u65b9\u3010Python\u3011&quot;,&quot;uri&quot;:&quot;https://juu7g.hatenablog.com/entry/Python/blog/notion-api&quot;},&quot;pro&quot;:&quot;free&quot;,&quot;router_type&quot;:&quot;blogs&quot;}}"
+data-device="pc"
+data-dont-recommend-pro="false"
+data-global-domain="https://hatena.blog"
+data-globalheader-color="b"
+data-globalheader-type="pc"
+data-has-touch-view="1"
+data-help-url="https://help.hatenablog.com"
+data-no-suggest-touch-view="1"
+data-page="entry"
+data-parts-domain="https://hatenablog-parts.com"
+data-plus-available=""
+data-pro="false"
+data-router-type="blogs"
+data-sentry-dsn="https://03a33e4781a24cf2885099fed222b56d@sentry.io/1195218"
+data-sentry-environment="production"
+data-sentry-sample-rate="0.1"
+data-static-domain="https://cdn.blog.st-hatena.com"
+data-version="b6dfa13fdd3db0041337cff8e11dda"
+
+
+
+
+  data-initial-state="{}"
+
+  >
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+  
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  
+
+
+  
+  <meta name="Hatena::Bookmark" content="nocomment"/>
+
+
+  <meta name="robots" content="max-image-preview:large" />
+
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=9; IE=10; IE=11" />
+  <title>〖実践〗Notion API の使い方【Python】 - プログラムでおかえしできるかな</title>
+
+  
+  <link rel="canonical" href="https://juu7g.hatenablog.com/entry/Python/blog/notion-api"/>
+
+
+
+  
+
+<meta itemprop="name" content="〖実践〗Notion API の使い方【Python】 - プログラムでおかえしできるかな"/>
+
+  <meta itemprop="image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220819/20220819141421.jpg#ai"/>
+
+
+  <meta property="og:title" content="〖実践〗Notion API の使い方【Python】 - プログラムでおかえしできるかな"/>
+<meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://juu7g.hatenablog.com/entry/Python/blog/notion-api"/>
+
+  <meta property="og:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220819/20220819141421.jpg#ai"/>
+
+<meta property="og:image:alt" content="〖実践〗Notion API の使い方【Python】 - プログラムでおかえしできるかな"/>
+    <meta property="og:description" content="Python での Notion API の使い方を紹介します。 既存の Notion データベースにデータを追加、更新、削除します。 追加、更新する時に必要なデータベースのプロパティを分かりやすく引数にする方法も考えたので紹介します。 Notion データベースにプログラムでデータが入れられると使い勝手が上がりますよ。" />
+<meta property="og:site_name" content="プログラムでおかえしできるかな"/>
+
+  <meta property="article:published_time" content="1660993243" />
+
+    <meta property="article:tag" content="Notion" />
+    <meta property="article:tag" content="ブログ" />
+    <meta property="article:tag" content="Python" />
+    <meta property="article:tag" content="IT" />
+      <meta name="twitter:card"  content="summary_large_image" />
+    <meta name="twitter:image" content="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220819/20220819141421.jpg#ai" />  <meta name="twitter:title" content="〖実践〗Notion API の使い方【Python】 - プログラムでおかえしできるかな" />    <meta name="twitter:description" content="Python での Notion API の使い方を紹介します。 既存の Notion データベースにデータを追加、更新、削除します。 追加、更新する時に必要なデータベースのプロパティを分かりやすく引数にする方法も考えたので紹介します。 Notion データベースにプログラムでデータが入れられると使い勝手が上がりますよ…" />  <meta name="twitter:app:name:iphone" content="はてなブログアプリ" />
+  <meta name="twitter:app:id:iphone" content="583299321" />
+  <meta name="twitter:app:url:iphone" content="hatenablog:///open?uri=https%3A%2F%2Fjuu7g.hatenablog.com%2Fentry%2FPython%2Fblog%2Fnotion-api" />
+  
+    <meta name="description" content="Python での Notion API の使い方を紹介します。 既存の Notion データベースにデータを追加、更新、削除します。 追加、更新する時に必要なデータベースのプロパティを分かりやすく引数にする方法も考えたので紹介します。 Notion データベースにプログラムでデータが入れられると使い勝手が上がりますよ。" />
+    <meta name="google-site-verification" content="7W0_6EyOSN7DzeNkxQg6GbuiVKpdHkuipIGgVZdvU5I" />
+
+
+  
+<script
+  id="embed-gtm-data-layer-loader"
+  data-data-layer-page-specific="{&quot;hatenablog&quot;:{&quot;blogs_permalink&quot;:{&quot;blog_hide_afc_field&quot;:&quot;false&quot;,&quot;brand_hide_afc&quot;:&quot;false&quot;,&quot;blog_struct_hide_afc&quot;:&quot;false&quot;,&quot;blog_afc_issued&quot;:&quot;false&quot;,&quot;blog_hide_afc_func&quot;:&quot;false&quot;,&quot;is_author_pro&quot;:&quot;false&quot;,&quot;has_related_entries_with_elasticsearch&quot;:&quot;false&quot;,&quot;entry_afc_issued&quot;:&quot;false&quot;,&quot;is_blog_sleeping&quot;:&quot;false&quot;}}}"
+>
+(function() {
+  function loadDataLayer(elem, attrName) {
+    if (!elem) { return {}; }
+    var json = elem.getAttribute(attrName);
+    if (!json) { return {}; }
+    return JSON.parse(json);
+  }
+
+  var globalVariables = loadDataLayer(
+    document.documentElement,
+    'data-data-layer'
+  );
+  var pageSpecificVariables = loadDataLayer(
+    document.getElementById('embed-gtm-data-layer-loader'),
+    'data-data-layer-page-specific'
+  );
+
+  var variables = [globalVariables, pageSpecificVariables];
+
+  if (!window.dataLayer) {
+    window.dataLayer = [];
+  }
+
+  for (var i = 0; i < variables.length; i++) {
+    window.dataLayer.push(variables[i]);
+  }
+})();
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4CXTW');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://juu7g.hatenablog.com/icon/favicon">
+<link rel="apple-touch-icon" href="https://juu7g.hatenablog.com/icon/touch">
+<link rel="icon" sizes="192x192" href="https://juu7g.hatenablog.com/icon/link">
+
+  
+
+<link rel="alternate" type="application/atom+xml" title="Atom" href="https://juu7g.hatenablog.com/feed"/>
+<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="https://juu7g.hatenablog.com/rss"/>
+
+  <link rel="alternate" type="application/json+oembed" href="https://hatena.blog/oembed?url=https%3A%2F%2Fjuu7g.hatenablog.com%2Fentry%2FPython%2Fblog%2Fnotion-api&amp;format=json" title="oEmbed Profile of 〖実践〗Notion API の使い方【Python】"/>
+<link rel="alternate" type="text/xml+oembed" href="https://hatena.blog/oembed?url=https%3A%2F%2Fjuu7g.hatenablog.com%2Fentry%2FPython%2Fblog%2Fnotion-api&amp;format=xml" title="oEmbed Profile of 〖実践〗Notion API の使い方【Python】"/>
+  
+  <link rel="author" href="http://www.hatena.ne.jp/juu7g/">
+
+  
+
+  
+
+
+  
+    
+<link rel="stylesheet" type="text/css" href="https://cdn.blog.st-hatena.com/css/blog.css?version=b6dfa13fdd3db0041337cff8e11dda"/>
+
+    
+  <link rel="stylesheet" type="text/css" href="https://usercss.blog.st-hatena.com/blog_style/26006613703948645/65a1dfd22689c71d04b98d4087901890df99ca07"/>
+  
+  
+
+  
+
+  
+<script> </script>
+
+  
+<style>
+  div#google_afc_user,
+  div.google-afc-user-container,
+  div.google_afc_image,
+  div.google_afc_blocklink {
+      display: block !important;
+  }
+</style>
+
+
+  
+    <script src="https://cdn.pool.st-hatena.com/valve/valve.js" async></script>
+<script id="test-valve-definition">
+  var valve = window.valve || [];
+
+  valve.push(function(v) {
+    v.config({
+      service: 'blog',
+      content: {
+        result: 'adtrust',
+        documentIds: ["blog:entry:4207112889910427859"]
+      }
+    });
+    v.defineDFPSlot({"lazy":"","sizes":[[300,250],[336,280],[468,60],"fluid"],"slotId":"google_afc_user_container_0","unit":"/4374287/blog_user"});
+    v.sealDFPSlots();
+  });
+</script>
+
+  
+
+  
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","dateModified":"2022-08-26T19:23:34+09:00","datePublished":"2022-08-20T20:00:43+09:00","headline":"〖実践〗Notion API の使い方【Python】","image":["https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220819/20220819141421.jpg#ai"]}</script>
+
+  
+
+  <link rel="stylesheet" type="text/css"  href="https://juu7g.github.io/hatena-blog-css/hatena_custom.css">
+
+<script data-ad-client="ca-pub-2545513576669085" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+  <body class="page-entry category-Notion category-ブログ category-Python category-IT globalheader-ng-enabled">
+    
+
+<div id="globalheader-container"
+  data-brand="hatenablog"
+  
+  >
+  <iframe id="globalheader" height="37" frameborder="0" allowTransparency="true"></iframe>
+</div>
+
+
+  
+  
+  
+    <nav class="
+      blog-controlls
+      
+    ">
+      <div class="blog-controlls-blog-icon">
+        <a href="https://juu7g.hatenablog.com/">
+          <img src="https://cdn.image.st-hatena.com/image/square/885f46ea75e7fea0cca36df20380c174432bd903/backend=imagemagick;height=128;version=1;width=128/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fblog_custom_icon%2F158185293%2F1618361397151959" alt="プログラムでおかえしできるかな"/>
+        </a>
+      </div>
+      <div class="blog-controlls-title">
+        <a href="https://juu7g.hatenablog.com/">プログラムでおかえしできるかな</a>
+      </div>
+      <a href="https://blog.hatena.ne.jp/juu7g/juu7g.hatenablog.com/subscribe?utm_campaign=subscribe_blog&amp;utm_source=blogs_topright_button&amp;utm_medium=button" class="blog-controlls-subscribe-btn test-blog-header-controlls-subscribe">
+        読者になる
+      </a>
+    </nav>
+  
+
+  <div id="container">
+    <div id="container-inner">
+      <header id="blog-title" data-brand="hatenablog">
+  <div id="blog-title-inner" >
+    <div id="blog-title-content">
+      <h1 id="title"><a href="https://juu7g.hatenablog.com/">プログラムでおかえしできるかな</a></h1>
+      
+        <h2 id="blog-description">定年を過ぎて何かの役に立てないかなと始めた元SEのブログです</h2>
+      
+    </div>
+  </div>
+</header>
+
+      
+
+      
+      
+
+
+
+
+<div id="content" class="hfeed"
+  
+  >
+  <div id="content-inner">
+    <div id="wrapper">
+      <div id="main">
+        <div id="main-inner">
+          
+
+
+          
+  
+  <!-- google_ad_section_start -->
+  <!-- rakuten_ad_target_begin -->
+  
+  
+  
+
+  
+
+  
+    
+      
+        <article class="entry hentry test-hentry js-entry-article date-first autopagerize_page_element chars-200 words-100 mode-markdown entry-odd" id="entry-4207112889910427859" data-keyword-campaign="" data-uuid="4207112889910427859" data-publication-type="entry">
+  <div class="entry-inner">
+    <header class="entry-header">
+  
+    <div class="date entry-date first">
+    <a href="https://juu7g.hatenablog.com/archive/2022/08/20" rel="nofollow">
+      <time datetime="2022-08-20T11:00:43Z" title="2022-08-20T11:00:43Z">
+        <span class="date-year">2022</span><span class="hyphen">-</span><span class="date-month">08</span><span class="hyphen">-</span><span class="date-day">20</span>
+      </time>
+    </a>
+      </div>
+  <h1 class="entry-title">
+  <a href="https://juu7g.hatenablog.com/entry/Python/blog/notion-api" class="entry-title-link bookmark">〖実践〗Notion API の使い方【Python】</a>
+</h1>
+
+  
+  
+
+  <div class="entry-categories categories">
+    
+    <a href="https://juu7g.hatenablog.com/archive/category/Notion" class="entry-category-link category-Notion">Notion</a>
+    
+    <a href="https://juu7g.hatenablog.com/archive/category/%E3%83%96%E3%83%AD%E3%82%B0" class="entry-category-link category-ブログ">ブログ</a>
+    
+    <a href="https://juu7g.hatenablog.com/archive/category/Python" class="entry-category-link category-Python">Python</a>
+    
+    <a href="https://juu7g.hatenablog.com/archive/category/IT" class="entry-category-link category-IT">IT</a>
+    
+  </div>
+
+
+  
+  <div class="customized-header">
+    <div class="entry-header-html"><a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+  </div>
+
+
+  
+
+</header>
+
+    
+
+
+    <div class="entry-content hatenablog-entry">
+  
+    <p><a href="/entry/Python/blog/notion-api"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220819/20220819141421.jpg#ai" alt="" /></a>
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> での Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> の使い方を紹介します。<br />
+既存の Notion データベースにデータを追加、更新、削除します。</p>
+
+<p>追加、更新する時に必要なデータベースのプロパティを分かりやすく引数にする方法も考えたので紹介します。</p>
+
+<p>Notion データベースにプログラムでデータが入れられると使い勝手が上がりますよ。
+<br style="clear: both;"></p>
+
+<p>追加される Notion データベースと追加するデータは次のリンクで紹介したものです。</p>
+
+<ul>
+<li>データベースのリンク：『<a href="https://www.notion.so/03bc19abb3594cc5bf1d156615aab943?v=53c6671107e543e0b34c2e04ad09e4f0">ブログ記事管理</a>🔗』</li>
+<li>データベースの記事：『<a href="/entry/notion/blog/usage">ブログの記事を管理する(使い方)【Notionデータベース】</a>🔗』</li>
+<li>追加するデータの記事：『<a href="get-stars-bm-exe">はてなブログのスターとブックマークの数を取得するアプリ【フリー】</a>🔗』</li>
+</ul>
+
+
+<p>アプリを使って自分のブログの管理をしたい方は、こちらを参照してください。</p>
+
+<ul>
+<li>データ追加するアプリの記事：『<a href="/entry/notion/blog/notion-api-exe">ブログの記事を管理するNotionデータベースとデータ更新アプリ【フリー】</a>🔗』</li>
+</ul>
+
+
+<p><details open><summary>目次</summary></p>
+
+<ul class="table-of-contents">
+    <li><a href="#Python-で-Notion-API-を操作する">◆Python で Notion API を操作する</a></li>
+    <li><a href="#notion-client-パッケージの使い方">◆notion-client パッケージの使い方</a><ul>
+            <li><a href="#Clientクラスのコンストラクタの引数">◇Clientクラスのコンストラクタの引数</a></li>
+            <li><a href="#Notion-データベースの読み込み">◇Notion データベースの読み込み</a></li>
+            <li><a href="#Notion-データベースの書き込み">◇Notion データベースの書き込み</a></li>
+        </ul>
+    </li>
+    <li><a href="#Notion-API-操作について">◆Notion API 操作について</a><ul>
+            <li><a href="#Database-object-を介する操作">◇Database object を介する操作</a></li>
+            <li><a href="#Page-object-を介する操作">◇Page object を介する操作</a></li>
+            <li><a href="#Block-object-を介する操作">◇Block object を介する操作</a></li>
+        </ul>
+    </li>
+    <li><a href="#Notion-API-の各種設定値">◆Notion API の各種設定値</a><ul>
+            <li><a href="#ページオブジェクト">◇ページオブジェクト</a></li>
+            <li><a href="#プロパティ値">◇プロパティ値</a><ul>
+                    <li><a href="#型に対する内容の例">◎型に対する内容の例</a></li>
+                    <li><a href="#time-zomeについて">◎time zomeについて</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#データベースのプロパティに合ったプロパティ値の作り方">◆データベースのプロパティに合ったプロパティ値の作り方</a><ul>
+            <li><a href="#取得したデータ">◇取得したデータ</a></li>
+            <li><a href="#データ更新に必要なものだけにした結果">◇データ更新に必要なものだけにした結果</a></li>
+            <li><a href="#Python-でプロパティに変換">◇Python でプロパティに変換</a><ul>
+                    <li><a href="#コード">◎コード</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Python-で実践">◆Python で実践</a><ul>
+            <li><a href="#データベースの内容をJSONファイルに出力">◇データベースの内容をJSONファイルに出力</a></li>
+            <li><a href="#データベースのデータ更新のテスト辞書をリテラルで与えて更新">◇データベースのデータ更新のテスト。辞書をリテラルで与えて更新</a></li>
+            <li><a href="#CSV-ファイルを読んでデータベースを更新">◇CSV ファイルを読んでデータベースを更新</a></li>
+            <li><a href="#データベースのデータ削除">◇データベースのデータ削除</a></li>
+            <li><a href="#必要なパッケージ">◇必要なパッケージ</a></li>
+            <li><a href="#全体のソース">◇全体のソース</a></li>
+        </ul>
+    </li>
+    <li><a href="#Notion-インテグレーションの作成とデータベース-ID-の取得">◆Notion インテグレーションの作成とデータベース ID の取得</a><ul>
+            <li><a href="#インテグレーションの作成">◇インテグレーションの作成</a></li>
+            <li><a href="#データベースをシェア">◇データベースをシェア</a></li>
+        </ul>
+    </li>
+    <li><a href="#環境変数の設定">◆環境変数の設定</a><ul>
+            <li><a href="#環境変数設定画面の起動">◇環境変数設定画面の起動</a></li>
+        </ul>
+    </li>
+    <li><a href="#さいごに">◆さいごに</a><ul>
+            <li><a href="#ご注意">◇ご注意</a></li>
+        </ul>
+    </li>
+    <li><a href="#参考">◆参考</a></li>
+</ul>
+
+<p></details></p>
+
+<h2 id="Python-で-Notion-API-を操作する">◆<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> で Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を操作する</h2>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> で Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を操作するには、request パッケージでも対応が可能です。<br />
+しかし、<a href="https://pypi.org/project/notion-client/">notion-client パッケージ</a><i class="blogicon-external"></i> の方が使いやすいです。</p>
+
+<p>notion-client は、次のように言っています。<br />
+&emsp;💬Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> のシンプルで容易なクライアントである<br />
+&emsp;💬<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a> の <a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> バージョンという位置づけなので、双方の使い方はよく似ている</p>
+
+<p>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> リファレンスには、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> のサンプルとして request を使用した例が載っています。<br />
+notion-client を使用する場合、Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> リファレンスのサンプルは、上記のこともあって、<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a> を見た方が理解しやすいです。</p>
+
+<h2 id="notion-client-パッケージの使い方">◆notion-client パッケージの使い方</h2>
+
+<p>notion-client で Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を操作するには、Client クラスの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>を作成して操作します。</p>
+
+<p>&emsp;例：<code>notion = Client(auth=self.AUTH)</code></p>
+
+<h3 id="Clientクラスのコンストラクタの引数">◇Clientクラスのコンスト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%AF">ラク</a>タの引数</h3>
+
+<table>
+<thead>
+<tr>
+<th>オプション</th>
+<th>デフォルト値</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auth</code></td>
+<td>なし</td>
+<td>文字列</td>
+<td>Notionの<a href="#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90">インテグレーショントークン</a>を指定</td>
+</tr>
+<tr>
+<td><code>log_level</code></td>
+<td>logging.WARNING</td>
+<td>int</td>
+<td><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>が生成するログの詳細度<BR>デフォルトでは、ログはstdoutに出力</td>
+</tr>
+<tr>
+<td><code>timeout_ms</code></td>
+<td>60_000</td>
+<td>int</td>
+<td>RequestTimeoutErrorを発行する前に待機するミリ秒数</td>
+</tr>
+<tr>
+<td><code>base_url</code></td>
+<td><code>https://api.notion.com</code></td>
+<td>string</td>
+<td><a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>リク<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>トを送信するためのルートURL<br>モックサーバーでテストする場合用</td>
+</tr>
+<tr>
+<td><code>logger</code></td>
+<td>Log to console</td>
+<td>logging.Logger</td>
+<td>カスタムロガー指定可能</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="Notion-データベースの読み込み">◇Notion データベースの読み込み</h3>
+
+<p>notion-client で Notion データベースを読み込む簡単な例です。<br />
+Client クラスの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>に databases 属性（データベースオブジェクト）があります。<br />
+読み込みは、その databases 属性の query() メソッドを呼び出します。<br />
+呼び出しには、データベース ID をキーワード引数に指定します。<br />
+正常終了であれば、データベースの内容が辞書型で返ってきます。</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>notion.databases.query(
+    **{
+        <span class="synConstant">'database_id'</span> : <span class="synConstant">''</span>  <span class="synComment"># データベースID</span>
+       }
+)
+</pre>
+
+
+<h3 id="Notion-データベースの書き込み">◇Notion データベースの書き込み</h3>
+
+<p>notion-client で Notion データベースにデータを書き込む簡単な例です。<br />
+Client クラスの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>に page 属性（ページオブジェクト）があります。<br />
+書き込みは、その page 属性の create() メソッドを呼び出します。<br />
+呼び出しには、データベース ID、プロパティ値をキーワード引数に指定します。</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>notion.pages.create(
+    **{
+        <span class="synConstant">'parent'</span>: {<span class="synConstant">'database_id'</span>: <span class="synConstant">''</span>},  <span class="synComment"># データベースID</span>
+        <span class="synConstant">'properties'</span>: {}  <span class="synComment"># ここにカラム名と値を記載 </span>
+    }
+)
+</pre>
+
+
+<p>&emsp;➡ propertiesに設定する辞書が難しい</p>
+
+<h2 id="Notion-API-操作について">◆Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> 操作について</h2>
+
+<p>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> 操作についてまとめました。</p>
+
+<p>これらの操作は、notion-client パッケージの Client クラスの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>から行います。<br />
+Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> には、 <code>database object</code>, <code>page objects</code>, <code>block object</code> が存在し、それを介して Notion と対話します。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>では、ぞれぞれ <code>databases</code>, <code>pages</code>, <code>blocks</code> という属性が対応します。<br />
+何をどこにリク<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>トするのかということを気にしないで操作できます。</p>
+
+<p>以降の表で下線が付いているものは今回使用したものです。<br />
+それ以外の操作はリファレンスからの抜粋です。<br />
+表の中の notioon は、Client クラスの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>です。</p>
+
+<h3 id="Database-object-を介する操作">◇Database object を介する操作</h3>
+
+<p>データベースオブジェクトは、データベース ID を指定して操作します。</p>
+
+<table>
+<thead>
+<tr>
+<th>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>の記載</th>
+<th>対応メソッド</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Query a database(POST)</em></td>
+<td>notion.databases.query()</td>
+<td>▶問合せ▶データベースに含まれるページの配列を取得<br>フィルター条件と並べ替え基準を指定可能</td>
+</tr>
+<tr>
+<td>Create a database(POST)</td>
+<td>notion.databases.create()</td>
+<td>▶生成▶指定した親ページのサブページとしてデータベースを作成<br>指定したプロパティ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AD%A1%BC%A5%DE">スキーマ</a>を使用</td>
+</tr>
+<tr>
+<td>Update database(GET)</td>
+<td>notion.databases.update()</td>
+<td>▶更新▶指定したパラメータで既存のデータベースを更新</td>
+</tr>
+<tr>
+<td>Retrieve a database(GET)</td>
+<td>notion.databases.retrieve()</td>
+<td>▶取得▶指定した ID で Database オブジェクトを取得</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="Page-object-を介する操作">◇Page object を介する操作</h3>
+
+<p>ページオブジェクトは、Notion の一つのページに該当します。<br />
+一つのページには、プロパティ値が存在します。また、親が存在します。<br />
+親がデータベースの場合、プロパティ値はデータベースの表形式の1行に該当します。</p>
+
+<p>ページオブジェクトは、ページ ID を指定して操作します。</p>
+
+<table>
+<thead>
+<tr>
+<th>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>の記載</th>
+<th>対応メソッド</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retrive a page(GET)</td>
+<td>notion.pages.retrive()</td>
+<td>▶取得▶指定した ID で Page オブジェクトを取得<br>引数：page_id</td>
+</tr>
+<tr>
+<td><em>Create a page(POST)</em></td>
+<td>notion.pages.create()</td>
+<td>▶生成▶指定したデータベースに新しいページを作成するか、既存のページの子として作成<br>引数：parent, properties, children, icon, cover</td>
+</tr>
+<tr>
+<td><em>Update page(PATCH)</em></td>
+<td>notion.pages.update()</td>
+<td>▶更新▶指定したページのページ プロパティ値で更新<br>指定されていないプロパティは変更されません<br>引数：page_id, properties, archived, icon, cover</td>
+</tr>
+<tr>
+<td>Retrieve a pate property item(GET)</td>
+<td>notion.pages.properties.retrieve()</td>
+<td>▶取得▶指定した page_id および property_id の property_item オブジェクトを取得</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="Block-object-を介する操作">◇Block object を介する操作</h3>
+
+<p>ブロックオブジェクトは、Notion 内のコンテンツを表します。 <br />
+ブロックには、テキスト、リスト、メディアなどがあります。<br />
+ページも一種のブロックです<br />
+ブロックオブジェクトは、ブロック ID を指定して操作します。</p>
+
+<p>ブロック ID の取得方法が理解できていないので、「削除」以外は使っていません。<br />
+削除は、ページの削除で使用するので、ページ ID をブロック ID として使えたので使いました。<br />
+また、ページオブジェクトにも削除はあるのですが、ブロックオブジェクトを使うように指示されています。</p>
+
+<table>
+<thead>
+<tr>
+<th>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>の記載</th>
+<th>対応メソッド</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retrieve a block(GET)</td>
+<td>notion.blocks.retrive()</td>
+<td>▶取得▶指定した ID で Block オブジェクトを取得</td>
+</tr>
+<tr>
+<td>Update a block(PATCH)</td>
+<td>notion.blocks.update()</td>
+<td>▶更新▶ブロック タイプに基づいて、指定した block_id のコンテンツを更新</td>
+</tr>
+<tr>
+<td>Retrieve block children(GET)</td>
+<td>notion.blocks.children.list()</td>
+<td>▶取得▶指定した ID で、ブロックに含まれる子ブロック オブジェクトのページ分割された配列を返す</td>
+</tr>
+<tr>
+<td>Append block children(PATCH)</td>
+<td>notion.blocks.children.append()</td>
+<td>▶追加▶新しい子ブロックを作成し、指定した親 block_id に追加</td>
+</tr>
+<tr>
+<td><em>Delete a block(DELETE)</em></td>
+<td>notion.blocks.delete()</td>
+<td>▶削除▶指定した ID で Block オブジェクトを archived: true に設定<br>※ Notion UI アプリケーションでは、これによりブロックが「ゴミ箱」に移動され、引き続きアクセスして復元することができます<br>引数：block_id</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 id="Notion-API-の各種設定値">◆Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> の各種設定値</h2>
+
+<p>ここでは、Notion データベースに対して <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を使用することを前提に説明します。</p>
+
+<h3 id="ページオブジェクト">◇ページオブジェクト</h3>
+
+<p>データベースオブジェクトの Query() で問合せするとページオブジェクトの配列が返ります。</p>
+
+<p>ページオブジェクトのプロパティの一部です。</p>
+
+<table>
+<thead>
+<tr>
+<th>プロパティ</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object</td>
+<td>"page"固定</td>
+</tr>
+<tr>
+<td>id</td>
+<td>id</td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>作成日(<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%A4%B3%A6%C9%B8%BD%E0%BB%FE">世界標準時</a>間)</td>
+</tr>
+<tr>
+<td>last_edited_time</td>
+<td>更新日(<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%A4%B3%A6%C9%B8%BD%E0%BB%FE">世界標準時</a>間)</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>親情報。{"type":"database_id", "database_id":???}</td>
+</tr>
+<tr>
+<td>archived</td>
+<td><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A1%BC%A5%AB%A5%A4%A5%D6">アーカイブ</a>状態(削除する時に使用)</td>
+</tr>
+<tr>
+<td>properties</td>
+<td>プロパティ。{プロパティ名:プロパティ値}</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="プロパティ値">◇プロパティ値</h3>
+
+<p>ページオブジェクトにある proterties プロパティはオブジェクトで、キーはNotion データベースで定義したプロパティ名、値はそのプロパティの型に応じたオブジェクト（プロパティ値）になります。</p>
+
+<p>▽サンプル</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>   <span class="synConstant">&quot;properties&quot;</span>: {              <span class="synComment"># JSONにはコメントを付けられないのでPythonで記述しています</span>
+        <span class="synConstant">&quot;カテゴリ&quot;</span>: {            <span class="synComment"># プロパティ名(キー) これ以降がプロパティ値</span>
+            <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;UNHI&quot;</span>,
+            <span class="synConstant">&quot;type&quot;</span>: <span class="synConstant">&quot;multi_select&quot;</span>,   <span class="synComment"># 型名</span>
+            <span class="synConstant">&quot;multi_select&quot;</span>: [        <span class="synComment"># 型に対する内容</span>
+                {
+                    <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;87ef771a-1e60-492a-b06a-2d8ed9dcd58d&quot;</span>,
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;ブログ&quot;</span>,
+                    <span class="synConstant">&quot;color&quot;</span>: <span class="synConstant">&quot;brown&quot;</span>
+                },
+                {
+                    <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;e869c74e-480b-43e4-a653-70f4f89406c4&quot;</span>,
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;シニア&quot;</span>,
+                    <span class="synConstant">&quot;color&quot;</span>: <span class="synConstant">&quot;purple&quot;</span>
+                }
+            ]
+        },…
+</pre>
+
+
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>型名<br>"title", "rich_text", "number", "select", "multi_select", "date", "people", "files", "checkbox", "url", "email", "phone_number", "formula", "relation", "rollup", "created_time", "created_by", "last_edited_time", "last_edited_by", "status"</td>
+</tr>
+<tr>
+<td>型</td>
+<td>型に対する内容</td>
+</tr>
+</tbody>
+</table>
+
+
+<h4 id="型に対する内容の例">◎型に対する内容の例</h4>
+
+<p>型ごとに異なるオブジェクトを持っています。</p>
+
+<table>
+<thead>
+<tr>
+<th>型名</th>
+<th>設定例<br>"名前"：プロパティの名前</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>"名前":{<br>&emsp;"title":[{<br>&emsp;&emsp;"type":"text",<br>&emsp;&emsp;"text":{<br>&emsp;&emsp;&emsp;"content":"The title"<br>&emsp;&emsp;&emsp;}<br>&emsp;&emsp;}]<br>&emsp;}</td>
+</tr>
+<tr>
+<td>rich_text</td>
+<td>"名前":{<br>&emsp;"rich_text":[{<br>&emsp;&emsp;"type":"text",<br>&emsp;&emsp;&emsp;"text":{"content":"xxx"}<br>&emsp;&emsp;}, {<br>&emsp;&emsp;"type":"text",<br>&emsp;&emsp;&emsp;"text":{"content":"xxx"}, "annotations":{"italic":true}<br>&emsp;&emsp;}]<br>&emsp;}</td>
+</tr>
+<tr>
+<td>number</td>
+<td>"名前":{<br>&emsp;"number":1234<br>&emsp;}</td>
+</tr>
+<tr>
+<td>select</td>
+<td>"名前":{<br>&emsp;"select":{"name":"Option 1"}<br>&emsp;}</td>
+</tr>
+<tr>
+<td>multi_select</td>
+<td>"名前":{<br>&emsp;"multi_select":[{"name":"B"},{"name":"C"}]<br>&emsp;}</td>
+</tr>
+<tr>
+<td>date</td>
+<td>"名前":{<br>&emsp;"date":{<br>&emsp;&emsp;"stat":"2021-04-25", <br>&emsp;&emsp;"end":"2021-05-07"<br>&emsp;}<br>}</td>
+</tr>
+<tr>
+<td>files</td>
+<td>"名前":{<br>&emsp;"files":[{<br>&emsp;&emsp;"type":"external",<br>&emsp;&emsp;"name":"Space Wallpaper", <br>&emsp;&emsp;"external":{<br>&emsp;&emsp;&emsp;"url":"<a href="https://website.domain/images/space.png">https://website.domain/images/space.png</a>"<br>&emsp;&emsp;&emsp;}<br>&emsp;&emsp;}]<br>&emsp;}</td>
+</tr>
+<tr>
+<td>url</td>
+<td>"名前":{<br>&emsp;"url":"<a href="https://notion.so/notiondevs">https://notion.so/notiondevs</a>"<br>&emsp;}</td>
+</tr>
+</tbody>
+</table>
+
+
+<h4 id="time-zomeについて">◎time zomeについて</h4>
+
+<p>日付型のプロパティ値には、<code>time_zome</code> プロパティが存在します。<br />
+現在、Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> で、このプロパティは機能しません。<br />
+何もしないと標準時で指定された日時として扱われます。</p>
+
+<p>対応方法は、指定する日時に標準時との差を付加します。</p>
+
+<p>&emsp;例：2022-07-10 15:30:41+09:00</p>
+
+<h2 id="データベースのプロパティに合ったプロパティ値の作り方">◆データベースのプロパティに合ったプロパティ値の作り方</h2>
+
+<p>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> でデータベースの操作を行う場合、そのデータベースに定義されたプロパティに合ったプロパティを使って指示しなければなりません。</p>
+
+<p>次節に取得した Notion データベースのプロパティを載せていますが、なかなか複雑です。<br />
+プロパティの型によってその属性（色など）もプロパティに含まれているためです。</p>
+
+<p>プロパティの型にごとに設定するメソッドを作ろうかとも考えたのですが、型の数だけ作るのも大変そうだし、汎用的なメソッドにするのも難しそうなので、今回は止めました。</p>
+
+<p>その代わり、直感的にわかりやすい方法を思いつきました。</p>
+
+<p>それは、Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> で取得した Notion データベースのプロパティを基にデータ更新に使えるプロパティの辞書を作る事です。</p>
+
+<p><strong>【手順】</strong></p>
+
+<ol>
+<li>Notion データベースからページのプロパティのデータを取得する</li>
+<li>取得したデータを <a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> ファイルに出力する<br />
+  ※ <a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> ファイルにするのは辞書を可視化するため</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> ファイルをデータ更新に必要な要素だけにする</li>
+<li>必要な要素だけになったものを <a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> の辞書に置き換える</li>
+<li>さらにメソッド化する</li>
+</ol>
+
+
+<p><em>※以下、取得したデータを基に説明しますが、セキュリティ的に怪しいデータは「??????????」に変更してあります。ご了承ください。</em></p>
+
+<h3 id="取得したデータ">◇取得したデータ</h3>
+
+<pre class="code lang-json" data-lang="json" data-unlink><span class="synSpecial">{</span>
+    &quot;<span class="synStatement">object</span>&quot;: &quot;<span class="synConstant">list</span>&quot;,
+    &quot;<span class="synStatement">results</span>&quot;: <span class="synSpecial">[</span>
+        <span class="synSpecial">{</span>
+            &quot;<span class="synStatement">object</span>&quot;: &quot;<span class="synConstant">page</span>&quot;,
+            &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;,
+            &quot;<span class="synStatement">created_time</span>&quot;: &quot;<span class="synConstant">2022-05-09T06:42:00.000Z</span>&quot;,
+            &quot;<span class="synStatement">last_edited_time</span>&quot;: &quot;<span class="synConstant">2022-07-12T01:12:00.000Z</span>&quot;,
+            &quot;<span class="synStatement">created_by</span>&quot;: <span class="synSpecial">{</span>
+                &quot;<span class="synStatement">object</span>&quot;: &quot;<span class="synConstant">user</span>&quot;,
+                &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;
+            <span class="synSpecial">}</span>,
+            &quot;<span class="synStatement">last_edited_by</span>&quot;: <span class="synSpecial">{</span>
+                &quot;<span class="synStatement">object</span>&quot;: &quot;<span class="synConstant">user</span>&quot;,
+                &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;
+            <span class="synSpecial">}</span>,
+            &quot;<span class="synStatement">cover</span>&quot;: <span class="synIdentifier">null</span>,
+            &quot;<span class="synStatement">icon</span>&quot;: <span class="synIdentifier">null</span>,
+            &quot;<span class="synStatement">parent</span>&quot;: <span class="synSpecial">{</span>
+                &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">database_id</span>&quot;,
+                &quot;<span class="synStatement">database_id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;
+            <span class="synSpecial">}</span>,
+            &quot;<span class="synStatement">archived</span>&quot;: <span class="synConstant">false</span>,
+            &quot;<span class="synStatement">properties</span>&quot;: <span class="synSpecial">{</span>
+                &quot;<span class="synStatement">スター</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">%40RKt</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">number</span>&quot;,
+                    &quot;<span class="synStatement">number</span>&quot;: <span class="synConstant">5</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">掲載日</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">F%3Eh%3D</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">date</span>&quot;,
+                    &quot;<span class="synStatement">date</span>&quot;: <span class="synSpecial">{</span>
+                        &quot;<span class="synStatement">start</span>&quot;: &quot;<span class="synConstant">2021-05-13T10:28:00.000+09:00</span>&quot;,
+                        &quot;<span class="synStatement">end</span>&quot;: <span class="synIdentifier">null</span>,
+                        &quot;<span class="synStatement">time_zone</span>&quot;: <span class="synIdentifier">null</span>
+                    <span class="synSpecial">}</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">アイキャッチ画像</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">LIyv</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">files</span>&quot;,
+                    &quot;<span class="synStatement">files</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">https://cdn-ak.f.st-hatena.com/images/fotolife/??????????.png</span>&quot;,
+                            &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">external</span>&quot;,
+                            &quot;<span class="synStatement">external</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">url</span>&quot;: &quot;<span class="synConstant">https://cdn-ak.f.st-hatena.com/images/fotolife/??????????.png</span>&quot;
+                            <span class="synSpecial">}</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">ブックマーク</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">S%3ELZ</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">number</span>&quot;,
+                    &quot;<span class="synStatement">number</span>&quot;: <span class="synConstant">1</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">カスタムURL</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">SKu%7C</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">rich_text</span>&quot;,
+                    &quot;<span class="synStatement">rich_text</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">text</span>&quot;,
+                            &quot;<span class="synStatement">text</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">content</span>&quot;: &quot;<span class="synConstant">blog/gimp/shukusho</span>&quot;,
+                                &quot;<span class="synStatement">link</span>&quot;: <span class="synIdentifier">null</span>
+                            <span class="synSpecial">}</span>,
+                            &quot;<span class="synStatement">annotations</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">bold</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">italic</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">strikethrough</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">underline</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">code</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">default</span>&quot;
+                            <span class="synSpecial">}</span>,
+                            &quot;<span class="synStatement">plain_text</span>&quot;: &quot;<span class="synConstant">blog/gimp/shukusho</span>&quot;,
+                            &quot;<span class="synStatement">href</span>&quot;: <span class="synIdentifier">null</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">カテゴリ</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">UNHI</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">multi_select</span>&quot;,
+                    &quot;<span class="synStatement">multi_select</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;,
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">ブログ</span>&quot;,
+                            &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">brown</span>&quot;
+                        <span class="synSpecial">}</span>,
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;,
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">GIMP</span>&quot;,
+                            &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">pink</span>&quot;
+                        <span class="synSpecial">}</span>,
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;,
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">シニア</span>&quot;,
+                            &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">purple</span>&quot;
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">最終更新日</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">XH%3Ex</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">date</span>&quot;,
+                    &quot;<span class="synStatement">date</span>&quot;: <span class="synIdentifier">null</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">タグ</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">bua%3D</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">multi_select</span>&quot;,
+                    &quot;<span class="synStatement">multi_select</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">??????????</span>&quot;,
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">GIMP</span>&quot;,
+                            &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">brown</span>&quot;
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">リンク</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">vQ%60%3F</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">url</span>&quot;,
+                    &quot;<span class="synStatement">url</span>&quot;: &quot;<span class="synConstant">https://juu7g.hatenablog.com/entry/blog/gimp/shukusho</span>&quot;
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">タイトル</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">id</span>&quot;: &quot;<span class="synConstant">title</span>&quot;,
+                    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">title</span>&quot;,
+                    &quot;<span class="synStatement">title</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">text</span>&quot;,
+                            &quot;<span class="synStatement">text</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">content</span>&quot;: &quot;<span class="synConstant">ブログに便利な画像の縮小、反転【GIMP】</span>&quot;,
+                                &quot;<span class="synStatement">link</span>&quot;: <span class="synIdentifier">null</span>
+                            <span class="synSpecial">}</span>,
+                            &quot;<span class="synStatement">annotations</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">bold</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">italic</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">strikethrough</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">underline</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">code</span>&quot;: <span class="synConstant">false</span>,
+                                &quot;<span class="synStatement">color</span>&quot;: &quot;<span class="synConstant">default</span>&quot;
+                            <span class="synSpecial">}</span>,
+                            &quot;<span class="synStatement">plain_text</span>&quot;: &quot;<span class="synConstant">ブログに便利な画像の縮小、反転【GIMP】</span>&quot;,
+                            &quot;<span class="synStatement">href</span>&quot;: <span class="synIdentifier">null</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>
+            <span class="synSpecial">}</span>
+        <span class="synSpecial">}</span>
+    <span class="synSpecial">]</span>,
+    &quot;<span class="synStatement">next_cursor</span>&quot;: <span class="synIdentifier">null</span>,
+    &quot;<span class="synStatement">has_more</span>&quot;: <span class="synConstant">false</span>,
+    &quot;<span class="synStatement">type</span>&quot;: &quot;<span class="synConstant">page</span>&quot;,
+    &quot;<span class="synStatement">page</span>&quot;: <span class="synSpecial">{}</span>
+<span class="synSpecial">}</span>
+</pre>
+
+
+<p>先ほどプロパティ値の説明で使用した短い例で説明します。<br />
+<code>id</code> や <code>color</code> などはデータの追加や更新には不要なデータなので削除します。</p>
+
+<p>▽整理する前のサンプル</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>   <span class="synConstant">&quot;properties&quot;</span>: {              <span class="synComment"># JSONにはコメントを付けられないのでPythonで記述しています</span>
+        <span class="synConstant">&quot;カテゴリ&quot;</span>: {            <span class="synComment"># プロパティ名(キー)</span>
+            <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;UNHI&quot;</span>,         <span class="synComment"># 不要</span>
+            <span class="synConstant">&quot;type&quot;</span>: <span class="synConstant">&quot;multi_select&quot;</span>,   <span class="synComment"># 型名</span>
+            <span class="synConstant">&quot;multi_select&quot;</span>: [        <span class="synComment"># 型に対する内容</span>
+                {
+                    <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;87ef771a-1e60-492a-b06a-2d8ed9dcd58d&quot;</span>, <span class="synComment"># 不要</span>
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;ブログ&quot;</span>,
+                    <span class="synConstant">&quot;color&quot;</span>: <span class="synConstant">&quot;brown&quot;</span>  <span class="synComment"># 不要</span>
+                },
+                {
+                    <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;e869c74e-480b-43e4-a653-70f4f89406c4&quot;</span>, <span class="synComment"># 不要</span>
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;シニア&quot;</span>,
+                    <span class="synConstant">&quot;color&quot;</span>: <span class="synConstant">&quot;purple&quot;</span> <span class="synComment"># 不要</span>
+                }
+            ]
+        },…
+</pre>
+
+
+<p>▽整理した結果のサンプル</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>   <span class="synConstant">&quot;properties&quot;</span>: {              <span class="synComment"># JSONにはコメントを付けられないのでPythonで記述しています</span>
+        <span class="synConstant">&quot;カテゴリ&quot;</span>: {            <span class="synComment"># プロパティ名(キー)</span>
+            <span class="synConstant">&quot;type&quot;</span>: <span class="synConstant">&quot;multi_select&quot;</span>,   <span class="synComment"># 型名</span>
+            <span class="synConstant">&quot;multi_select&quot;</span>: [        <span class="synComment"># 型に対する内容</span>
+                {
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;ブログ&quot;</span>,
+                },
+                {
+                    <span class="synConstant">&quot;name&quot;</span>: <span class="synConstant">&quot;シニア&quot;</span>,
+                }
+            ]
+        },…
+</pre>
+
+
+<p>かなりスッキリします。</p>
+
+<h3 id="データ更新に必要なものだけにした結果">◇データ更新に必要なものだけにした結果</h3>
+
+<pre class="code lang-json" data-lang="json" data-unlink><span class="synSpecial">{</span>
+    &quot;<span class="synStatement">object</span>&quot;: &quot;<span class="synConstant">list</span>&quot;,
+    &quot;<span class="synStatement">results</span>&quot;: <span class="synSpecial">[</span>
+        <span class="synSpecial">{</span>
+            &quot;<span class="synStatement">properties</span>&quot;: <span class="synSpecial">{</span>
+                &quot;<span class="synStatement">スター</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">number</span>&quot;: <span class="synConstant">5</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">掲載日</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">date</span>&quot;: <span class="synSpecial">{</span>
+                        &quot;<span class="synStatement">start</span>&quot;: &quot;<span class="synConstant">2021-05-13T10:28:00.000+09:00</span>&quot;,
+                        &quot;<span class="synStatement">end</span>&quot;: <span class="synIdentifier">null</span>,
+                        &quot;<span class="synStatement">time_zone</span>&quot;: <span class="synIdentifier">null</span>
+                    <span class="synSpecial">}</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">アイキャッチ画像</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">files</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">https://cdn-ak.f.st-hatena.com/images/fotolife/??????????.png</span>&quot;,
+                            &quot;<span class="synStatement">external</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">url</span>&quot;: &quot;<span class="synConstant">https://cdn-ak.f.st-hatena.com/images/fotolife/??????????.png</span>&quot;
+                            <span class="synSpecial">}</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">カスタムURL</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">rich_text</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">text</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">content</span>&quot;: &quot;<span class="synConstant">blog/gimp/shukusho</span>&quot;,
+                                &quot;<span class="synStatement">link</span>&quot;: <span class="synIdentifier">null</span>
+                            <span class="synSpecial">}</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">カテゴリ</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">multi_select</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">ブログ</span>&quot;
+                        <span class="synSpecial">}</span>,
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">シニア</span>&quot;
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">タグ</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">multi_select</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">name</span>&quot;: &quot;<span class="synConstant">GIMP</span>&quot;
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">リンク</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">url</span>&quot;: &quot;<span class="synConstant">https://juu7g.hatenablog.com/entry/blog/gimp/shukusho</span>&quot;
+                <span class="synSpecial">}</span>,
+                &quot;<span class="synStatement">タイトル</span>&quot;: <span class="synSpecial">{</span>
+                    &quot;<span class="synStatement">title</span>&quot;: <span class="synSpecial">[</span>
+                        <span class="synSpecial">{</span>
+                            &quot;<span class="synStatement">text</span>&quot;: <span class="synSpecial">{</span>
+                                &quot;<span class="synStatement">content</span>&quot;: &quot;<span class="synConstant">ブログに便利な画像の縮小、反転【GIMP】</span>&quot;
+                            <span class="synSpecial">}</span>
+                        <span class="synSpecial">}</span>
+                    <span class="synSpecial">]</span>
+                <span class="synSpecial">}</span>
+            <span class="synSpecial">}</span>
+        <span class="synSpecial">}</span>
+    <span class="synSpecial">]</span>,
+    &quot;<span class="synStatement">next_cursor</span>&quot;: <span class="synIdentifier">null</span>,
+    &quot;<span class="synStatement">has_more</span>&quot;: <span class="synConstant">false</span>
+<span class="synSpecial">}</span>
+</pre>
+
+
+<h3 id="Python-でプロパティに変換">◇<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> でプロパティに変換</h3>
+
+<p>後はこのようなデータになるように、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%C6%A5%E9%A5%EB">リテラル</a>のところを変数に置き換えてデータ作成メソッドになるように修正します。</p>
+
+<p>今回、更新用のデーは <a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルを読み込んだ辞書型のデータを使います。<br />
+先ほどのデータの更新に不要な部分を取り除いた <a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> データを基に <a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> の辞書型のデータを作ります。</p>
+
+<p>いくつか注意点があります。</p>
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルを読み込んだデータはすべて文字列なのでプロパティが数値型の場合には数値に変換が必要</li>
+<li>マルチセレクト用のデータはカンマ区切りの文字列(<code>"a,b"</code>)なので"name"をキーにした辞書のリスト（<code>[{"name":"a"}, {"name":"b"}]</code>）にする</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BF%A5%A4%A5%E0%A5%BE%A1%BC%A5%F3">タイムゾーン</a>は動かないので日時に標準時との差を付加する<br />
+  <code>2022-07-10 15:30:41</code> ⇒ <code>2022-07-10 15:30:41+09:00</code></li>
+<li>設定値がない場合はキーごと削除する</li>
+</ul>
+
+
+<h4 id="コード">◎コード</h4>
+
+<pre class="code lang-python" data-lang="python" data-unlink><span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">Notion用プロパティデータ作成</span>
+<span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synPreProc">import</span> re
+
+<span class="synStatement">def</span> <span class="synIdentifier">set_properties</span>(url:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>, title:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>, published:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>, updated:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>, 
+                    bookmark:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, yellow:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, green:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, red:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, blue:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, purple:<span class="synIdentifier">int</span>=<span class="synConstant">0</span>, 
+                    category:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>, eye_catch:<span class="synIdentifier">str</span>=<span class="synConstant">&quot;&quot;</span>):
+    <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">    引数を値にしたNotionデータベースのプロパティ用辞書を作成する</span>
+<span class="synConstant">    Args:</span>
+<span class="synConstant">        any:    get_hatena_infoで出力したCSVの各カラム</span>
+<span class="synConstant">    Returns:</span>
+<span class="synConstant">        dict:   特定Notionデータベースのプロパティ用辞書</span>
+<span class="synConstant">    &quot;&quot;&quot;</span>
+    <span class="synComment"># カスタマイズURLはURLのentryより後ろだけ</span>
+    c_url = re.sub(<span class="synConstant">&quot;^.+/entry/&quot;</span>, <span class="synConstant">&quot;&quot;</span>, url)
+    <span class="synComment"># CSVを読み込んだデータはすべて文字列なので数値は変換が必要</span>
+    star_num = <span class="synIdentifier">int</span>(yellow) + <span class="synIdentifier">int</span>(green) + <span class="synIdentifier">int</span>(red) + <span class="synIdentifier">int</span>(blue) + <span class="synIdentifier">int</span>(purple)
+    bookmark_num = <span class="synIdentifier">int</span>(bookmark)
+    <span class="synComment"># マルチセレクト用のデータはカンマ区切りの文字列(&quot;a,b&quot;)なので&quot;name&quot;をキーにした辞書のリストにする</span>
+    c1 = [{<span class="synConstant">&quot;name&quot;</span>:c} <span class="synStatement">for</span> c <span class="synStatement">in</span> category.split(<span class="synConstant">&quot;,&quot;</span>)]
+    <span class="synComment"># t1 = [{&quot;name&quot;:t} for t in tags]</span>
+    properties = {
+                <span class="synConstant">&quot;スター&quot;</span>: {
+                    <span class="synConstant">&quot;number&quot;</span>: star_num
+                },
+                <span class="synConstant">&quot;掲載日&quot;</span>: {
+                    <span class="synConstant">&quot;date&quot;</span>: {
+                        <span class="synComment"># タイムゾーンは動かないので日時に標準時との差を付加する</span>
+                        <span class="synConstant">&quot;start&quot;</span>: published+<span class="synConstant">&quot;+09:00&quot;</span>,
+                        <span class="synComment"># &quot;time_zone&quot;: &quot;Asia/Tokyo&quot;</span>
+                    }
+                },
+                <span class="synConstant">&quot;アイキャッチ画像&quot;</span>: {
+                    <span class="synConstant">&quot;files&quot;</span>: [
+                        {
+                            <span class="synConstant">&quot;name&quot;</span>: eye_catch,
+                            <span class="synConstant">&quot;external&quot;</span>: {
+                                <span class="synConstant">&quot;url&quot;</span>: eye_catch
+                            }
+                        }
+                    ]
+                },
+                <span class="synConstant">&quot;ブックマーク&quot;</span>: {
+                    <span class="synConstant">&quot;number&quot;</span>: bookmark_num
+                },
+                <span class="synConstant">&quot;カスタムURL&quot;</span>: {
+                    <span class="synConstant">&quot;rich_text&quot;</span>: [
+                        {
+                            <span class="synConstant">&quot;text&quot;</span>: {
+                                <span class="synConstant">&quot;content&quot;</span>: c_url,
+                            }
+                        }
+                    ]
+                },
+                <span class="synConstant">&quot;カテゴリ&quot;</span>: {
+                    <span class="synConstant">&quot;multi_select&quot;</span>: <span class="synIdentifier">list</span>(c1)
+                },
+                <span class="synComment"># &quot;タグ&quot;: {</span>
+                <span class="synComment">#     &quot;multi_select&quot;: list(t1)</span>
+                <span class="synComment"># },</span>
+                <span class="synConstant">&quot;リンク&quot;</span>: {
+                    <span class="synConstant">&quot;url&quot;</span>: url
+                },
+                <span class="synConstant">&quot;タイトル&quot;</span>: {
+                    <span class="synConstant">&quot;title&quot;</span>: [
+                        {
+                            <span class="synConstant">&quot;text&quot;</span>: {
+                                <span class="synConstant">&quot;content&quot;</span>: title
+                            }
+                        }
+                    ]
+                },
+            }
+    <span class="synComment"># 設定がないキーは削除する</span>
+    <span class="synStatement">if</span> category == <span class="synConstant">&quot;&quot;</span>:
+        <span class="synStatement">del</span> properties[<span class="synConstant">&quot;カテゴリ&quot;</span>] 
+    <span class="synStatement">if</span> eye_catch == <span class="synConstant">&quot;&quot;</span>:
+        <span class="synStatement">del</span> properties[<span class="synConstant">&quot;アイキャッチ画像&quot;</span>] 
+    <span class="synStatement">return</span> properties
+</pre>
+
+
+<h2 id="Python-で実践">◆<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> で実践</h2>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> で Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を使ったプログラミングをしました。<br />
+データベースの更新や削除、情報取得やテストなどを作成したので紹介します。<br />
+全体のソースを見ると分かりますが、switch 変数を用意して処理を切り替えています。</p>
+
+<p>説明するのは次の4つの処理です。</p>
+
+<ul>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92JSON%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E5%87%BA%E5%8A%9B">データベースの内容をJSONファイルに出力</a></li>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E6%9B%B4%E6%96%B0%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E8%BE%9E%E6%9B%B8%E3%82%92%E3%83%AA%E3%83%86%E3%83%A9%E3%83%AB%E3%81%A7%E4%B8%8E%E3%81%88%E3%81%A6%E6%9B%B4%E6%96%B0">データベースのデータ更新のテスト。辞書をリテラルで与えて更新</a></li>
+<li><a href="#CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%82%92%E6%9B%B4%E6%96%B0">CSV ファイルを読んでデータベースを更新</a></li>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E5%89%8A%E9%99%A4">データベースのデータ削除</a></li>
+</ul>
+
+
+<h3 id="データベースの内容をJSONファイルに出力">◇データベースの内容を<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a>ファイルに出力</h3>
+
+<p>Notion データベースを更新するプロパティ値を作るためにデータベースの中身を確認する必要がありました。</p>
+
+<p>データベースオブジェクトの問い合わせの戻り値は辞書です。<br />
+辞書データを可視化するのによい方法を捜したところ、<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> のdump()メソッドが良いようです。<br />
+文字で <a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> ファイルに出力されるので読めます。</p>
+
+<p>▽呼び出し</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>        doc = notion_api.get_database() <span class="synComment"># データベースを取得</span>
+        notion_api.dump_results(doc)    <span class="synComment"># JSONファイルに出力</span>
+</pre>
+
+
+<p>▽データベースオブジェクトの問合せ</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">get_database</span>(self) -&gt; <span class="synIdentifier">dict</span>:
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        データベースを取得</span>
+<span class="synConstant">        Returns:</span>
+<span class="synConstant">            dict:   データベースの内容</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        <span class="synStatement">try</span>:
+            my_page = self.notion.databases.query(
+                **{
+                    <span class="synConstant">&quot;database_id&quot;</span>: self.DATABASE_ID,
+                }
+            )
+        <span class="synStatement">except</span> APIResponseError <span class="synStatement">as</span> error:
+            <span class="synComment"># if error.code == APIErrorCode.ObjectNotFound:</span>
+            <span class="synStatement">if</span> error.code == APIErrorCode.ValidationError:
+                <span class="synComment"># For example: handle by asking the user to select a different database</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;データベースIDを確認してください&quot;</span>)
+            <span class="synStatement">else</span>:
+                <span class="synComment"># Other error handling code</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;インテグレーションのトークンを確認してください&quot;</span>)
+                <span class="synComment"># logging.exception(error.code)</span>
+        <span class="synStatement">return</span> my_page
+</pre>
+
+
+<p>▽<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSON">JSON</a> ファイルに出力</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">dump_results</span>(self, doc:<span class="synIdentifier">dict</span>):
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        辞書をjson形式のファイルに出力</span>
+<span class="synConstant">        Args:</span>
+<span class="synConstant">            dict:   出力したい辞書</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        file_name = f<span class="synConstant">&quot;myDictionary_{datetime.now().strftime('%m%d')}.json&quot;</span>
+        jf = <span class="synIdentifier">open</span>(file_name, <span class="synConstant">&quot;w&quot;</span>, encoding=<span class="synConstant">&quot;utf_8_sig&quot;</span>)
+        json.dump(doc, jf, ensure_ascii=<span class="synIdentifier">False</span>)
+        jf.close()
+</pre>
+
+
+<h3 id="データベースのデータ更新のテスト辞書をリテラルで与えて更新">◇データベースのデータ更新のテスト。辞書を<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%C6%A5%E9%A5%EB">リテラル</a>で与えて更新</h3>
+
+<p>最終的には、<a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルを読んでデータベースを更新します。<br />
+まずは、1件ずつ更新動作を確認するためにこちらの処理を用意しました。</p>
+
+<p>「<a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E5%90%88%E3%81%A3%E3%81%9F%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E5%80%A4%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">データベースのプロパティに合ったプロパティ値の作り方</a>」で説明したデータベースを更新する時のプロパティ値を作成するメソッドを呼び出します。<br />
+引数には辞書型のデータを自分で用意します。</p>
+
+<p>▽呼び出し</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>        data = {<span class="synConstant">&quot;url&quot;</span>:<span class="synConstant">&quot;https://xxx.hatenablog.com/entry/xxx&quot;</span>, <span class="synConstant">&quot;title&quot;</span>:<span class="synConstant">&quot;タイトル&quot;</span>, 
+            <span class="synConstant">&quot;published&quot;</span>:<span class="synConstant">&quot;2022-06-01 21:50:15&quot;</span>, <span class="synConstant">&quot;yellow&quot;</span>:<span class="synConstant">37</span>, 
+            <span class="synConstant">&quot;category&quot;</span>:<span class="synConstant">'シニア, 暮らし'</span>
+            }
+
+        properties = notion_db_scm.set_properties(**data)           <span class="synComment"># プロパティ用辞書作成</span>
+        notion_api.append_page_2database(properties=properties)     <span class="synComment"># 追加</span>
+</pre>
+
+
+<p>▽データの追加</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">append_page_2database</span>(self, properties:<span class="synIdentifier">dict</span>):
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        データベースに引数の内容を追加</span>
+<span class="synConstant">        Args:</span>
+<span class="synConstant">            dict:   記事情報</span>
+<span class="synConstant">        Returns:</span>
+<span class="synConstant">            dict:   操作の結果</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        <span class="synStatement">try</span>:
+            my_page = self.notion.pages.create(
+                **{
+                    <span class="synConstant">&quot;parent&quot;</span>:{<span class="synConstant">&quot;database_id&quot;</span>: self.DATABASE_ID},
+                    <span class="synConstant">&quot;properties&quot;</span>:properties
+                }
+            )
+        <span class="synStatement">except</span> APIResponseError <span class="synStatement">as</span> error:
+            <span class="synStatement">if</span> error.code == APIErrorCode.ObjectNotFound:
+                <span class="synComment"># For example: handle by asking the user to select a different database</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;データベースIDを確認してください&quot;</span>)
+            <span class="synStatement">else</span>:
+                <span class="synComment"># Other error handling code</span>
+                <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;target properties:{properties}&quot;</span>)
+                <span class="synComment"># logging.exception(error.code)</span>
+        <span class="synStatement">return</span> my_page
+</pre>
+
+
+<h3 id="CSV-ファイルを読んでデータベースを更新">◇<a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルを読んでデータベースを更新</h3>
+
+<p>読み込む <a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルは次の記事のアプリで作成されるものです。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルのカラム構成は、次の記事で確認できます。</p>
+
+<p>&emsp;📄『<a href="get-stars-bm-exe#%E5%87%BA%E5%8A%9B%E3%81%95%E3%82%8C%E3%82%8B-CSV">はてなブログのスターとブックマークの数を取得するアプリ【フリー】</a>🔗』</p>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/CSV">CSV</a> ファイルは、DictReader() メソッドを使用して辞書型のデータに読み込みます。<br />
+そのデータからプロパティ用辞書を作成します。</p>
+
+<p>データベースの対しての操作は、記事の URL がデータベースに存在するかどうかで追加するか更新するかを切り分けます。</p>
+
+<p>▽呼び出し</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>        <span class="synStatement">if</span> <span class="synIdentifier">len</span>(sys.argv) &gt; <span class="synConstant">1</span>:
+            file_name = sys.argv[<span class="synConstant">1</span>]
+        <span class="synStatement">else</span>:
+            <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;ファイルを指定してください&quot;</span>)
+            <span class="synIdentifier">input</span>(<span class="synConstant">&quot;</span><span class="synSpecial">\n</span><span class="synConstant">確認したらEnterキーを押してください&quot;</span>)
+            sys.exit()
+        
+        <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;{file_name} の内容で更新します。&quot;</span>)
+
+        <span class="synStatement">try</span>:
+            <span class="synComment"># CSV(1行目がカラム定義)を辞書として読んで</span>
+            <span class="synStatement">with</span> <span class="synIdentifier">open</span>(file_name, newline=<span class="synConstant">''</span>, mode=<span class="synConstant">&quot;r&quot;</span>, encoding=<span class="synConstant">&quot;utf-8-sig&quot;</span>) <span class="synStatement">as</span> csvfile:
+                spamreader = csv.DictReader(csvfile)
+                <span class="synStatement">for</span> row <span class="synStatement">in</span> spamreader:
+                    properties = notion_db_scm.set_properties(**row)        <span class="synComment"># プロパティ用辞書作成</span>
+                    <span class="synComment"># 更新データが既にデータベースにあるかをurlでチェック</span>
+                    doc = notion_api.get_page_by_url(row.get(<span class="synConstant">&quot;url&quot;</span>))        <span class="synComment"># 問合せ(urlでフィルタリング)</span>
+                    <span class="synStatement">if</span> doc:
+                        <span class="synStatement">if</span> <span class="synIdentifier">len</span>(doc[<span class="synConstant">&quot;results&quot;</span>]) &gt; <span class="synConstant">0</span>:
+                            page_id = doc[<span class="synConstant">&quot;results&quot;</span>][<span class="synConstant">0</span>].get(<span class="synConstant">&quot;id&quot;</span>)
+                            notion_api.update_page(page_id, properties)     <span class="synComment"># 更新</span>
+                            <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;更新：{row.get('title')}&quot;</span>)
+                        <span class="synStatement">else</span>:
+                            notion_api.append_page_2database(properties)    <span class="synComment"># 追加</span>
+                            <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;追加：{row.get('title')}&quot;</span>)
+                    <span class="synStatement">else</span>:
+                        <span class="synComment"># データベース読み込みに問題があったので中断</span>
+                        <span class="synStatement">break</span>
+                <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;処理終了&quot;</span>)
+        <span class="synStatement">except</span> <span class="synType">Exception</span> <span class="synStatement">as</span> e:
+            <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;エラーが発生しました：{e}&quot;</span>)
+</pre>
+
+
+<p>▽データの問合せ（フィルタ指定）</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">get_page_by_url</span>(self, url:<span class="synIdentifier">str</span>) -&gt; <span class="synIdentifier">dict</span>:
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        データベースを取得</span>
+<span class="synConstant">        　データベースの「リンク」プロパティを引数でフィルタリングした結果</span>
+<span class="synConstant">        Args:</span>
+<span class="synConstant">            str:    記事のURL(データベースのキーとして扱う)</span>
+<span class="synConstant">        Returns:</span>
+<span class="synConstant">            dict:   データベースの内容</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        my_page = <span class="synIdentifier">None</span>
+        <span class="synStatement">try</span>:
+            my_page = self.notion.databases.query(
+                **{
+                    <span class="synConstant">&quot;database_id&quot;</span>: self.DATABASE_ID,
+                    <span class="synConstant">&quot;filter&quot;</span>:{<span class="synConstant">&quot;or&quot;</span>:[{
+                        <span class="synConstant">&quot;property&quot;</span>:<span class="synConstant">&quot;リンク&quot;</span>,
+                        <span class="synConstant">&quot;url&quot;</span>:{<span class="synConstant">&quot;equals&quot;</span>:url}
+                    }]}
+                }
+            )
+        <span class="synStatement">except</span> APIResponseError <span class="synStatement">as</span> error:
+            <span class="synComment"># if error.code == APIErrorCode.ObjectNotFound:</span>
+            <span class="synStatement">if</span> error.code == APIErrorCode.ValidationError:
+                <span class="synComment"># For example: handle by asking the user to select a different database</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;データベースIDを確認してください&quot;</span>)
+            <span class="synStatement">else</span>:
+                <span class="synComment"># Other error handling code</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;インテグレーションのトークンを確認してください&quot;</span>)
+                <span class="synComment"># logging.exception(error.code)</span>
+        <span class="synStatement">return</span> my_page
+</pre>
+
+
+<p>フィルタの指定は、データベースの「リンク」プロパティのプロパティ値を見て記述します。<br />
+<code>"リンク": {"url": "https://juu7g.hatenablog.com/entry/blog/gimp/shukusho"},</code><br />
+とあるので、<code>property</code> が「リンク」で、 <code>url</code> が url 変数と等しい (equals) を指定します。<br />
+フィルタの指定は、<code>or</code> を付ける必要はなかったと思います。<br />
+サンプルを基に作ったら、このようになってしまいました。</p>
+
+<p>▽データの更新</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">update_page</span>(self, page_id:<span class="synIdentifier">str</span>, properties:<span class="synIdentifier">dict</span>) -&gt; <span class="synIdentifier">dict</span>:
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        データベースの既存のpage_idのデータに引数の内容を更新</span>
+<span class="synConstant">        Args:</span>
+<span class="synConstant">            str:    page ID</span>
+<span class="synConstant">            dict:   記事情報</span>
+<span class="synConstant">        Returns:</span>
+<span class="synConstant">            dict:   操作の結果</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        <span class="synStatement">try</span>:
+            my_page = self.notion.pages.update(
+                **{
+                    <span class="synConstant">&quot;page_id&quot;</span>:page_id,
+                    <span class="synConstant">&quot;properties&quot;</span>:properties
+                }
+            )
+        <span class="synStatement">except</span> APIResponseError <span class="synStatement">as</span> error:
+            <span class="synStatement">if</span> error.code == APIErrorCode.ObjectNotFound:
+                <span class="synComment"># For example: handle by asking the user to select a different database</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;データベースIDを確認してください&quot;</span>)
+            <span class="synStatement">else</span>:
+                <span class="synComment"># Other error handling code</span>
+                <span class="synComment"># logging.exception(error.code)</span>
+                <span class="synStatement">pass</span>
+        <span class="synStatement">return</span> my_page
+</pre>
+
+
+<h3 id="データベースのデータ削除">◇データベースのデータ削除</h3>
+
+<p>削除処理は、まず、データベースに問合せして全ページオブジェクトを取得します。<br />
+データの削除に必要なページオブジェクトの ID を取得します。
+ログ出力用にページオブジェクトの「タイトル」プロパティの値を取得します。<br />
+ID とタイトルを関連付けて処理を繰り返し全ページオブジェクトを削除します。</p>
+
+<p>▽問い合わせの結果データの先頭</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>{
+    <span class="synConstant">&quot;object&quot;</span>: <span class="synConstant">&quot;list&quot;</span>,
+    <span class="synConstant">&quot;results&quot;</span>: [
+        {
+            <span class="synConstant">&quot;object&quot;</span>: <span class="synConstant">&quot;page&quot;</span>,
+            <span class="synConstant">&quot;id&quot;</span>: <span class="synConstant">&quot;??????????&quot;</span>,
+</pre>
+
+
+<p>問合せの結果は、<code>results</code> キーの値が配列になり、ページオブジェクトが複数存在します。<br />
+ID はすぐ取れますが、タイトルはプロパティ値の中なのでオブジェクトが<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C6%FE%A4%EC%BB%D2">入れ子</a>になっていて分かりにくいです。</p>
+
+<p>▽呼び出し</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>        doc = notion_api.get_database()     <span class="synComment"># データベースを取得</span>
+        <span class="synStatement">if</span> <span class="synIdentifier">len</span>(doc[<span class="synConstant">&quot;results&quot;</span>]) &gt; <span class="synConstant">0</span>:
+            page_ids = [obj[<span class="synConstant">&quot;id&quot;</span>] <span class="synStatement">for</span> obj <span class="synStatement">in</span> doc[<span class="synConstant">&quot;results&quot;</span>] <span class="synStatement">if</span> obj[<span class="synConstant">&quot;object&quot;</span>] == <span class="synConstant">&quot;page&quot;</span>] <span class="synComment"># 結果からpage_idを取得</span>
+            page_titles = [obj[<span class="synConstant">&quot;properties&quot;</span>][<span class="synConstant">&quot;タイトル&quot;</span>][<span class="synConstant">&quot;title&quot;</span>][<span class="synConstant">0</span>][<span class="synConstant">&quot;text&quot;</span>][<span class="synConstant">&quot;content&quot;</span>] <span class="synStatement">for</span> obj <span class="synStatement">in</span> doc[<span class="synConstant">&quot;results&quot;</span>] <span class="synStatement">if</span> obj[<span class="synConstant">&quot;object&quot;</span>] == <span class="synConstant">&quot;page&quot;</span>] <span class="synComment"># 結果からタイトルを取得</span>
+            <span class="synStatement">for</span> page_id, page_title <span class="synStatement">in</span> <span class="synIdentifier">zip</span>(page_ids, page_titles):
+                notion_api.delete_block(page_id)    <span class="synComment"># データベースから削除</span>
+                <span class="synIdentifier">print</span>(f<span class="synConstant">&quot;削除：{page_title}&quot;</span>)
+</pre>
+
+
+<p>▽削除処理</p>
+
+<pre class="code lang-python" data-lang="python" data-unlink>    <span class="synStatement">def</span> <span class="synIdentifier">delete_block</span>(self, page_id:<span class="synIdentifier">str</span>) -&gt; <span class="synIdentifier">dict</span>:
+        <span class="synConstant">&quot;&quot;&quot;</span>
+<span class="synConstant">        データベースから引数のデータを削除</span>
+<span class="synConstant">        Args:</span>
+<span class="synConstant">            str:    page ID</span>
+<span class="synConstant">        Returns:</span>
+<span class="synConstant">            dict:   操作の結果</span>
+<span class="synConstant">        &quot;&quot;&quot;</span>
+        <span class="synStatement">try</span>:
+            my_page = self.notion.blocks.delete(
+                **{
+                    <span class="synConstant">&quot;block_id&quot;</span>:page_id
+                }
+            )
+        <span class="synStatement">except</span> APIResponseError <span class="synStatement">as</span> error:
+            <span class="synStatement">if</span> error.code == APIErrorCode.ObjectNotFound:
+                <span class="synComment"># For example: handle by asking the user to select a different database</span>
+                <span class="synIdentifier">print</span>(<span class="synConstant">&quot;データベースIDを確認してください&quot;</span>)
+            <span class="synStatement">else</span>:
+                <span class="synComment"># Other error handling code</span>
+                <span class="synComment"># logging.exception(error.code)</span>
+                <span class="synStatement">pass</span>
+        <span class="synStatement">return</span> my_page
+</pre>
+
+
+<h3 id="必要なパッケージ">◇必要なパッケージ</h3>
+
+<ul>
+<li><a href="https://pypi.org/project/notion-client/">notion-client</a> <i class="blogicon-external"></i><br />
+  【インストール】pip install notion-client<br />
+  【インポート】&emsp;from notion_client import Client</li>
+</ul>
+
+
+<h3 id="全体のソース">◇全体のソース</h3>
+
+<p>全体のソースはこちらから取得できます。<br />
+取得先：<a href="https://github.com/juu7g/Python-use-Notion-API">GitHub juu7g/Python-use-Notion-API</a> <i class="blogicon-external"></i></p>
+
+<h2 id="Notion-インテグレーションの作成とデータベース-ID-の取得">◆Notion インテグレーションの作成とデータベース ID の取得</h2>
+
+<p>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を使うためには Notion 側に準備が必要です。</p>
+
+<p>必要なのは次の2つです。どちらも本記事で説明しているソースを使う場合は、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>に設定します。</p>
+
+<ul>
+<li>インテグレーションの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ン</li>
+<li>Notion データベースのデータベース ID</li>
+</ul>
+
+
+<p>まず、Notion のインテグレーションを作成し、そのインテグレーションを介してアクセスしたいデータベースをシェアします。</p>
+
+<p>イメージ的にはオンラインストレージ（インテグレーション）を作成してその中のファイル（データベース）をシェアするのに近いでしょうか。</p>
+
+<h3 id="インテグレーションの作成">◇インテグレーションの作成</h3>
+
+<p><section class="columns" markdown="1"></p>
+
+<ol>
+<li>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> サイトへアクセス<br />
+ （URL：<a href="https://developers.notion.com/">https://developers.notion.com/</a>）</li>
+<li>ページ右上のリンク <a href="https://www.notion.so/my-integrations">View my integrations</a> をクリック</li>
+<li>『<a href="https://www.notion.so/my-integrations">私のインテグレーション | Notion開発者</a>』が開く</li>
+<li>「新しいインテグレーションを作成する」をクリック</li>
+<li>新しいインテグレーション設定画面が表示されます</li>
+<li>「名前」にインテグレーションの名前を入力<br />
+  適当な名前を入力します</li>
+<li>「関連<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EF%A1%BC%A5%AF%A5%B9%A5%DA%A1%BC%A5%B9">ワークスペース</a>」を選択<br />
+  個人使用の場合は一つしか選択肢がないと思います</li>
+<li>「機能」を選択<br />
+  デフォルトの状態のままで大丈夫です<br />
+  私は「ユーザー情報なし」にだけ変更しました</li>
+<li>「送信」をクリック<br />
+  インテグレーションが作成されます</li>
+<li>「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ン」が表示されるのでコピー
+
+<ul>
+<li>表示をクリック</li>
+<li>コピーをクリック<br />
+  こちらを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>に登録します</li>
+</ul>
+</li>
+</ol>
+
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220820/20220820162529.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144224.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144204.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144257.png" alt="" /></p>
+
+<p></section></p>
+
+<h3 id="データベースをシェア">◇データベースをシェア</h3>
+
+<p><section class="columns" markdown="1">
+次に、アクセスしたいデータベースをシェアします。<br />
+ここでのアクセスしたいデータベースというのは、「ブログ記事管理」データベースをコピーしたデータベースです。</p>
+
+<ol>
+<li>Notion のサイトでアクセスしたいデータベースを選択</li>
+<li>画面右上の「共有」をクリック</li>
+<li>ダイアログが出るので「招待」をクリック</li>
+<li>インテグレーションの選択<br />
+  選択肢から作成したインテグレーションを選択<br />
+  選択後、再度「招待」をクリック<br />
+  「編集権限」が表示されればOK</li>
+<li>「リンクをコピー」をクリック<br />
+  データベースのURLがコピーされます</li>
+<li>URL からデータベースIDを取得<br />
+  （<code>/</code>の次から<code>?</code>の前まで）<br />
+  コピーしたURLをどこかにペーストして実施<br />
+  ★データベースURL：<code>https://www.notion.so/ここから～ここまで?v=ここにも値があります</code><br />
+  ⇒データベースID：<code>ここから～ここまで</code><br />
+      こちらを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>に登録します</li>
+</ol>
+
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144118.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144230.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144311.png" alt="" /></p>
+
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20220814/20220814144251.png" alt="" /><br />
+</section></p>
+
+<h2 id="環境変数の設定">◆<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>の設定</h2>
+
+<p>本記事で説明しているソースを使って Notion データベースにアクセスするためには、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>に次のものを設定する必要があります。</p>
+
+<table>
+<thead>
+<tr>
+<th><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>の変数</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>py_notion_int_token</td>
+<td>Notion インテグレーション<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ン</td>
+</tr>
+<tr>
+<td>py_notion_db</td>
+<td>Notion データベース ID</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="環境変数設定画面の起動">◇<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>設定画面の起動</h3>
+
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>設定画面を起動して追加します。</p>
+
+<ol>
+<li>スタートメニュー</li>
+<li>プログラムとファイルの検索に「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>」と入れる</li>
+<li>検索結果に「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>を編集」が出るのでクリック</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>設定画面が出る</li>
+<li>「新規」をクリック</li>
+<li>変数名と変数値を入力してOKをクリックする</li>
+</ol>
+
+
+<h2 id="さいごに">◆さいごに</h2>
+
+<p>Notion データベースを使い始めた時から Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> は使ってみたいと思っていました。</p>
+
+<p>いきなりではハードルが高そうに感じたので <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%D5%A5%A9%A5%C8%A5%E9%A5%A4%A5%D5">はてなフォトライフ</a>の <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> から始めました。</p>
+
+<p>データベース更新用のデータを取得するために <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%D6%A5%ED%A5%B0">はてなブログ</a>の <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> も使いました。</p>
+
+<p>そしてやっと Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> を使うことができました。一歩一歩進んできたなと思います。</p>
+
+<p>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> と notion-client の組合せは、仕様書を読み解くのが難しくて苦労しました。</p>
+
+<p>特にプロパティ値の指定方法が理解できませんでした。<br />
+しかし、自分なりの理解しやすい方法を見つけてからは何とかなりました。</p>
+
+<p>これから Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> のプログラミングを始める方がこの記事で始めやすくなっていると幸いです。</p>
+
+<p><section class="box-frame" markdown="1">
+<span class="box-title"><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%A2%A4%EF%A4%BB%A4%C6%C6%C9%A4%DF%A4%BF%A4%A4">あわせて読みたい</a></span>
+📄 <a href="/entry/notion/blog/howto">Notionデータベースの作り方【Notionデータベース】</a>🔗<br />
+📄 <a href="get-eye-catch">はてなブログのアイキャッチ画像のURLの取り方【Python】</a>🔗
+</section></p>
+
+<h3 id="ご注意">◇ご注意</h3>
+
+<p>本記事は次のバージョンの下で動作した内容を基に記述しています。</p>
+
+<ul>
+<li>Notion 2022年7月のNotionサービス</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> 3.8.5</li>
+<li>notion-client 1.0.0</li>
+</ul>
+
+
+<p>ご利用に際しては、『<a href="/entry/disclaimer">免責事項</a>』をご確認ください。<br />
+お気づきの点がございましたら『<a href="/entry/contact">お問い合わせ</a>』からお問い合わせください。</p>
+
+<h2 id="参考">◆参考</h2>
+
+<ul>
+<li>Notion <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>：<a href="https://developers.notion.com/">Notion API</a></li>
+<li>Notion リファレンス：<a href="https://developers.notion.com/reference/intro">Introduction</a></li>
+<li>データベースオブジェクト：<a href="https://developers.notion.com/reference/database">Database object</a></li>
+<li>プロパティオブジェクト：<a href="https://developers.notion.com/reference/property-object">Property object</a></li>
+<li>notion-client：<a href="https://pypi.org/project/notion-client/">notion-client · PyPI</a></li>
+<li>解説：<a href="https://qiita.com/thomi40/items/fe2a828746f31ad827ba">Notion APIでデータベースを操作する - Qiita</a></li>
+<li>解説：<a href="https://zenn.dev/ysksatoo/articles/66fd26893a6cdd">Notion API × Python</a></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ン解説：<a href="https://tektektech.com/notion-api/">【Notion】APIついに実装...!簡単な動作確認をやってみる...!</a></li>
+<li>日付解説：<a href="https://www.hanatare-papa.jp/entry/technology-notion-1_3">【Notion】Notion API 日付プロパティのtimezone設定について - Hanatare's PaPa</a></li>
+</ul>
+
+
+<div class="dt-write">
+投稿：<time datetime="2022-08-20" itemprop="datepublished">2022-08-20</time>
+、更新：<time datetime="2022-08-26" itemprop="dateModified">2022-08-26</time>
+</div>
+
+
+    
+
+
+
+
+    
+
+  
+</div>
+
+    
+  <footer class="entry-footer">
+    
+    <div class="entry-tags-wrapper">
+  <div class="entry-tags">
+      <span class="entry-tag">
+        <a href="https://d.hatena.ne.jp/keyword/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0" class="entry-tag-link">
+          
+          
+          <span class="entry-tag-icon">#</span><span class="entry-tag-label">はてなブログ</span>
+        </a>
+      </span>
+    
+      <span class="entry-tag">
+        <a href="https://d.hatena.ne.jp/keyword/Notion" class="entry-tag-link">
+          
+          
+          <span class="entry-tag-icon">#</span><span class="entry-tag-label">Notion</span>
+        </a>
+      </span>
+    
+      <span class="entry-tag">
+        <a href="https://d.hatena.ne.jp/keyword/Notion%20API" class="entry-tag-link">
+          
+          
+          <span class="entry-tag-icon">#</span><span class="entry-tag-label">Notion API</span>
+        </a>
+      </span>
+      </div>
+</div>
+
+    <p class="entry-footer-section track-inview-by-gtm" data-gtm-track-json="{&quot;area&quot;: &quot;finish_reading&quot;}">
+  <span class="author vcard"><span class="fn" data-load-nickname="1" data-user-name="juu7g" >juu7g</span></span>
+  <span class="entry-footer-time"><a href="https://juu7g.hatenablog.com/entry/Python/blog/notion-api"><time data-relative datetime="2022-08-20T11:00:43Z" title="2022-08-20T11:00:43Z" class="updated">2022-08-20 20:00</time></a></span>
+  
+  
+  
+    <span class="
+      entry-footer-subscribe
+      
+    " data-test-blog-controlls-subscribe>
+      <a href="https://blog.hatena.ne.jp/juu7g/juu7g.hatenablog.com/subscribe?utm_medium=button&amp;utm_source=blogs_entry_footer&amp;utm_campaign=subscribe_blog">
+        読者になる
+      </a>
+    </span>
+  
+</p>
+
+    
+  <div
+    class="hatena-star-container"
+    data-hatena-star-container
+    data-hatena-star-url="https://juu7g.hatenablog.com/entry/Python/blog/notion-api"
+    data-hatena-star-title="〖実践〗Notion API の使い方【Python】"
+    data-hatena-star-variant="profile-icon"
+    data-hatena-star-profile-url-template="https://blog.hatena.ne.jp/{username}/"
+  ></div>
+
+
+    
+<div class="social-buttons">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+    
+  
+  
+    
+    <div class="google-afc-image test-google-rectangle-ads">      
+      
+      <div id="google_afc_user_container_0" class="google-afc-user-container google_afc_blocklink2_5 google_afc_boder" data-test-unit="/4374287/blog_user"></div>
+      
+        <a href="http://blog.hatena.ne.jp/guide/pro" class="open-pro-modal" data-guide-pro-modal-ad-url="https://hatena.blog/guide/pro/modal/ad">広告を非表示にする</a>
+      
+    </div>
+  
+  
+
+
+    <div class="customized-footer">
+      
+
+        
+
+        
+        
+  <div class="entry-footer-html"><a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></div>
+
+
+      
+    </div>
+    
+
+  </footer>
+
+  </div>
+</article>
+
+      
+      
+    
+  
+
+  
+  <!-- rakuten_ad_target_end -->
+  <!-- google_ad_section_end -->
+  
+  
+  
+  <div class="pager pager-permalink permalink">
+    
+      
+      <span class="pager-prev">
+        <a href="https://juu7g.hatenablog.com/entry/life/hearing-loss" rel="prev">
+          <span class="pager-arrow">&laquo; </span>
+          父にはウグイスの鳴き声が聞こえない
+        </a>
+      </span>
+    
+    
+      
+      <span class="pager-next">
+        <a href="https://juu7g.hatenablog.com/entry/notion/blog/notion-api-exe" rel="next">
+          ブログの記事を管理するNotionデータベー…
+          <span class="pager-arrow"> &raquo;</span>
+        </a>
+      </span>
+    
+  </div>
+
+
+  
+
+
+
+        </div>
+      </div>
+
+      <aside id="box1">
+  <div id="box1-inner">
+  </div>
+</aside>
+
+    </div><!-- #wrapper -->
+
+    
+<aside id="box2">
+  
+  <div id="box2-inner">
+    
+      
+
+<div class="hatena-module hatena-module-profile">
+  <div class="hatena-module-title">
+    プロフィール
+  </div>
+  <div class="hatena-module-body">
+    
+    <a href="https://juu7g.hatenablog.com/about" class="profile-icon-link">
+      <img src="https://cdn.profile-image.st-hatena.com/users/juu7g/profile.png?1619138162"
+      alt="id:juu7g" class="profile-icon" />
+    </a>
+    
+
+    
+    <span class="id">
+      <a href="https://juu7g.hatenablog.com/about" class="hatena-id-link"><span data-load-nickname="1" data-user-name="juu7g">id:juu7g</span></a>
+      
+  
+  
+
+
+    </span>
+    
+
+    
+
+    
+    <div class="profile-description">
+      <p>定年退職した元SEです。<br />
+Pythonの勉強を始めました。<br />
+勉強したり、庭をいじったり、<br />
+ブログを書いたりしています。</p>
+
+    </div>
+    
+
+    
+      <div class="hatena-follow-button-box btn-subscribe js-hatena-follow-button-box"
+  
+  >
+
+  <a href="#" class="hatena-follow-button js-hatena-follow-button">
+    <span class="subscribing">
+      <span class="foreground">読者です</span>
+      <span class="background">読者をやめる</span>
+    </span>
+    <span class="unsubscribing" data-track-name="profile-widget-subscribe-button" data-track-once>
+      <span class="foreground">読者になる</span>
+      <span class="background">読者になる</span>
+    </span>
+  </a>
+  <div class="subscription-count-box js-subscription-count-box">
+    <i></i>
+    <u></u>
+    <span class="subscription-count js-subscription-count">
+    </span>
+  </div>
+</div>
+
+    
+
+    
+
+    <div class="profile-about">
+      <a href="https://juu7g.hatenablog.com/about">このブログについて</a>
+    </div>
+
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-links">
+  <div class="hatena-module-title">
+    ブログについて
+  </div>
+  <div class="hatena-module-body">
+    <ul class="hatena-urllist">
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/entry/disclaimer">免責事項</a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/entry/privacy-policy">プライバシーポリシー</a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/entry/contact">お問い合わせ</a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/entry/disclaimer#Disclaimer-copyright-link">Disclaimer</a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/entry/privacy-policy#Privacy-policy">Privacy policy</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-search-box">
+  <div class="hatena-module-title">
+    検索
+  </div>
+  <div class="hatena-module-body">
+    <form class="search-form" role="search" action="https://juu7g.hatenablog.com/search" method="get">
+  <input type="text" name="q" class="search-module-input" value="" placeholder="記事を検索" required>
+  <input type="submit" value="検索" class="search-module-button" />
+</form>
+
+  </div>
+</div>
+
+    
+      
+
+<div class="hatena-module hatena-module-category">
+  <div class="hatena-module-title">
+    カテゴリー
+  </div>
+  <div class="hatena-module-body">
+    <ul class="hatena-urllist">
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%82%B7%E3%83%8B%E3%82%A2" class="category-シニア">
+            シニア (161)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E6%9A%AE%E3%82%89%E3%81%97" class="category-暮らし">
+            暮らし (28)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E7%8B%AC%E3%82%8A%E8%A8%80" class="category-独り言">
+            独り言 (16)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E5%81%A5%E5%BA%B7" class="category-健康">
+            健康 (7)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E5%BA%AD" class="category-庭">
+            庭 (32)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B8%E3%83%A7%E3%82%A2" class="category-フェイジョア">
+            フェイジョア (21)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%83%96%E3%83%AD%E3%82%B0" class="category-ブログ">
+            ブログ (49)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" class="category-ブラウザ">
+            ブラウザ (3)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%83%AC%E3%82%B8%E3%83%A3%E3%83%BC" class="category-レジャー">
+            レジャー (17)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84" class="category-スポーツ">
+            スポーツ (6)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E9%9F%B3%E6%A5%BD" class="category-音楽">
+            音楽 (7)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E7%A9%BA" class="category-空">
+            空 (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/IT" class="category-IT">
+            IT (57)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/markdown" class="category-markdown">
+            markdown (5)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/CSS" class="category-CSS">
+            CSS (6)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/GIMP" class="category-GIMP">
+            GIMP (10)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Notion" class="category-Notion">
+            Notion (7)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Python" class="category-Python">
+            Python (46)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Tkinter" class="category-Tkinter">
+            Tkinter (19)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/TkinterDnD2" class="category-TkinterDnD2">
+            TkinterDnD2 (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Selenium" class="category-Selenium">
+            Selenium (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/BeautifulSoup" class="category-BeautifulSoup">
+            BeautifulSoup (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/pdfminer" class="category-pdfminer">
+            pdfminer (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/psycopg2" class="category-psycopg2">
+            psycopg2 (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/pandas" class="category-pandas">
+            pandas (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Pillow" class="category-Pillow">
+            Pillow (6)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/openpyxl" class="category-openpyxl">
+            openpyxl (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/PostgreSQL" class="category-PostgreSQL">
+            PostgreSQL (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/RPA" class="category-RPA">
+            RPA (6)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/English" class="category-English">
+            English (3)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Notion%28en%29" class="category-Notion(en)">
+            Notion(en) (2)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/Python%28en%29" class="category-Python(en)">
+            Python(en) (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E9%9F%B3%E5%A3%B0" class="category-音声">
+            音声 (6)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://juu7g.hatenablog.com/archive/category/%E6%9C%AC" class="category-本">
+            本 (3)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-html">
+    <div class="hatena-module-title">おすすめ記事</div>
+  <div class="hatena-module-body">
+    <p><section class="osusume" markdown="1">
+<section class="osusumeitem" markdown="1">
+<strong>内容を更新しました</strong><br/>
+<a href="/entry/blog/star"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20210823/20210823204135.png" alt="" /></a><br/>
+はてなスターの履歴(自分で付けたスターが分かります)
+</section>
+<section class="osusumeitem" markdown="1">
+<strong>めまいにお悩みの方へ</strong><br/>
+<a href="/entry/health/memai"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20210504/20210504121716.png" alt="" /></a><br/>
+めまいをリンパマッサージで予防しています
+</section>
+<section class="osusumeitem" markdown="1">
+<strong>ブログ運営のお供に</strong><br/>
+<a href="/entry/Python/freesoft"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20230706/20230706193554.gif" alt="" /></a><br/>
+じゅうのフリーソフト部屋<br/>
+</section>
+<section class="osusumeitem" markdown="1">
+<strong>町田瑠唯選手ファンへ</strong><br/>
+<a href="/entry/sports/machidarui-wnba-2022"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/j/juu7g/20221015/20221015205124.png" alt="" /></a><br/>
+WNBA町田瑠唯選手の2022年シーズン
+</section>
+</section></p>
+
+  </div>
+</div>
+
+    
+      <div class="hatena-module hatena-module-recent-entries ">
+  <div class="hatena-module-title">
+    <a href="https://juu7g.hatenablog.com/archive">
+      最新記事
+    </a>
+  </div>
+  <div class="hatena-module-body">
+    <ul class="recent-entries hatena-urllist urllist-with-thumbnails">
+  
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+                      <a class="urllist-image-link recent-entries-image-link" href="https://juu7g.hatenablog.com/entry/life/dpoint">
+  <img alt="dポイントの効率的な利用方法" src="https://cdn.image.st-hatena.com/image/square/7153cdf9c6bc25a6a008ff4aeabdb093cc9aab30/backend=imagemagick;height=60;version=1;width=60/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjuu7g%2F20240515%2F20240515193334.png%23ai" class="urllist-image recent-entries-image" title="dポイントの効率的な利用方法" width="60" height="60" loading="lazy">
+</a>
+
+          <a href="https://juu7g.hatenablog.com/entry/life/dpoint" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">dポイントの効率的な利用方法</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+                      <a class="urllist-image-link recent-entries-image-link" href="https://juu7g.hatenablog.com/entry/garden/veronica">
+  <img alt="ベロニカを定植＆フェイジョアの蕾と訪問者" src="https://cdn.image.st-hatena.com/image/square/302608d583966b892224e6691f22917e92775e67/backend=imagemagick;height=60;version=1;width=60/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjuu7g%2F20240509%2F20240509191505.jpg%23ai" class="urllist-image recent-entries-image" title="ベロニカを定植＆フェイジョアの蕾と訪問者" width="60" height="60" loading="lazy">
+</a>
+
+          <a href="https://juu7g.hatenablog.com/entry/garden/veronica" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">ベロニカを定植＆フェイジョアの蕾と訪問者</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+                      <a class="urllist-image-link recent-entries-image-link" href="https://juu7g.hatenablog.com/entry/life/generative-ai">
+  <img alt="生成AIのGeminiとCopilotを使って水栓の比較をさせてみたら苦手なことが分かった" src="https://cdn.image.st-hatena.com/image/square/feb56a5669e7c680a961f6f4cdee2ae74dc73dd8/backend=imagemagick;height=60;version=1;width=60/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjuu7g%2F20240505%2F20240505164941.png%23ai" class="urllist-image recent-entries-image" title="生成AIのGeminiとCopilotを使って水栓の比較をさせてみたら苦手なことが分かった" width="60" height="60" loading="lazy">
+</a>
+
+          <a href="https://juu7g.hatenablog.com/entry/life/generative-ai" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">生成AIのGeminiとCopilotを使って水栓の比較をさせてみたら苦手なことが分かった</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+                      <a class="urllist-image-link recent-entries-image-link" href="https://juu7g.hatenablog.com/entry/blog/past36">
+  <img alt="おかげさまでブログ開設３周年、何とか続いてます" src="https://cdn.image.st-hatena.com/image/square/2714690fec4cdcd2efec173bcf0e1f99bd503899/backend=imagemagick;height=60;version=1;width=60/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjuu7g%2F20240429%2F20240429170137.png%23ai" class="urllist-image recent-entries-image" title="おかげさまでブログ開設３周年、何とか続いてます" width="60" height="60" loading="lazy">
+</a>
+
+          <a href="https://juu7g.hatenablog.com/entry/blog/past36" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">おかげさまでブログ開設３周年、何とか続いてます</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+    
+    <li class="urllist-item recent-entries-item">
+      <div class="urllist-item-inner recent-entries-item-inner">
+        
+          
+                      <a class="urllist-image-link recent-entries-image-link" href="https://juu7g.hatenablog.com/entry/sports/mlb-gameday">
+  <img alt="GamedayでMLB観戦" src="https://cdn.image.st-hatena.com/image/square/87b95b3c2c04cb463d4956613e054a576f1dc4e7/backend=imagemagick;height=60;version=1;width=60/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjuu7g%2F20240423%2F20240423153451.png%23ai" class="urllist-image recent-entries-image" title="GamedayでMLB観戦" width="60" height="60" loading="lazy">
+</a>
+
+          <a href="https://juu7g.hatenablog.com/entry/sports/mlb-gameday" class="urllist-title-link recent-entries-title-link  urllist-title recent-entries-title">GamedayでMLB観戦</a>
+
+
+          
+          
+
+                </div>
+    </li>
+  
+</ul>
+
+      </div>
+</div>
+
+    
+      
+<div class="hatena-module hatena-module-entries-access-ranking"
+  data-count="5"
+  data-source="access"
+  data-enable_customize_format="0"
+  data-display_entry_image_size_width="60"
+  data-display_entry_image_size_height="60"
+
+  data-display_entry_category="0"
+  data-display_entry_image="1"
+  data-display_entry_image_size_width="60"
+  data-display_entry_image_size_height="60"
+  data-display_entry_body_length="0"
+  data-display_entry_date="0"
+  data-display_entry_title_length="20"
+  data-restrict_entry_title_length="0"
+  data-display_bookmark_count="0"
+
+>
+  <div class="hatena-module-title">
+    
+      注目記事
+    
+  </div>
+  <div class="hatena-module-body">
+    
+  </div>
+</div>
+
+    
+      
+
+<div class="hatena-module hatena-module-archive" data-archive-type="default" data-archive-url="https://juu7g.hatenablog.com/archive">
+  <div class="hatena-module-title">
+    <a href="https://juu7g.hatenablog.com/archive">月別アーカイブ</a>
+  </div>
+  <div class="hatena-module-body">
+    
+      
+        <ul class="hatena-urllist">
+          
+            <li class="archive-module-year archive-module-year-hidden" data-year="2024">
+              <div class="archive-module-button">
+                <span class="archive-module-hide-button">▼</span>
+                <span class="archive-module-show-button">▶</span>
+              </div>
+              <a href="https://juu7g.hatenablog.com/archive/2024" class="archive-module-year-title archive-module-year-2024">
+                2024
+              </a>
+              <ul class="archive-module-months">
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2024/05" class="archive-module-month-title archive-module-month-2024-5">
+                      2024 / 5
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2024/04" class="archive-module-month-title archive-module-month-2024-4">
+                      2024 / 4
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2024/03" class="archive-module-month-title archive-module-month-2024-3">
+                      2024 / 3
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2024/02" class="archive-module-month-title archive-module-month-2024-2">
+                      2024 / 2
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2024/01" class="archive-module-month-title archive-module-month-2024-1">
+                      2024 / 1
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="archive-module-year archive-module-year-hidden" data-year="2023">
+              <div class="archive-module-button">
+                <span class="archive-module-hide-button">▼</span>
+                <span class="archive-module-show-button">▶</span>
+              </div>
+              <a href="https://juu7g.hatenablog.com/archive/2023" class="archive-module-year-title archive-module-year-2023">
+                2023
+              </a>
+              <ul class="archive-module-months">
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/12" class="archive-module-month-title archive-module-month-2023-12">
+                      2023 / 12
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/11" class="archive-module-month-title archive-module-month-2023-11">
+                      2023 / 11
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/10" class="archive-module-month-title archive-module-month-2023-10">
+                      2023 / 10
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/09" class="archive-module-month-title archive-module-month-2023-9">
+                      2023 / 9
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/08" class="archive-module-month-title archive-module-month-2023-8">
+                      2023 / 8
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/07" class="archive-module-month-title archive-module-month-2023-7">
+                      2023 / 7
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/06" class="archive-module-month-title archive-module-month-2023-6">
+                      2023 / 6
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/05" class="archive-module-month-title archive-module-month-2023-5">
+                      2023 / 5
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/04" class="archive-module-month-title archive-module-month-2023-4">
+                      2023 / 4
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/03" class="archive-module-month-title archive-module-month-2023-3">
+                      2023 / 3
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/02" class="archive-module-month-title archive-module-month-2023-2">
+                      2023 / 2
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2023/01" class="archive-module-month-title archive-module-month-2023-1">
+                      2023 / 1
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="archive-module-year archive-module-year-hidden" data-year="2022">
+              <div class="archive-module-button">
+                <span class="archive-module-hide-button">▼</span>
+                <span class="archive-module-show-button">▶</span>
+              </div>
+              <a href="https://juu7g.hatenablog.com/archive/2022" class="archive-module-year-title archive-module-year-2022">
+                2022
+              </a>
+              <ul class="archive-module-months">
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/12" class="archive-module-month-title archive-module-month-2022-12">
+                      2022 / 12
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/11" class="archive-module-month-title archive-module-month-2022-11">
+                      2022 / 11
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/10" class="archive-module-month-title archive-module-month-2022-10">
+                      2022 / 10
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/09" class="archive-module-month-title archive-module-month-2022-9">
+                      2022 / 9
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/08" class="archive-module-month-title archive-module-month-2022-8">
+                      2022 / 8
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/07" class="archive-module-month-title archive-module-month-2022-7">
+                      2022 / 7
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/06" class="archive-module-month-title archive-module-month-2022-6">
+                      2022 / 6
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/05" class="archive-module-month-title archive-module-month-2022-5">
+                      2022 / 5
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/04" class="archive-module-month-title archive-module-month-2022-4">
+                      2022 / 4
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/03" class="archive-module-month-title archive-module-month-2022-3">
+                      2022 / 3
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/02" class="archive-module-month-title archive-module-month-2022-2">
+                      2022 / 2
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2022/01" class="archive-module-month-title archive-module-month-2022-1">
+                      2022 / 1
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+            <li class="archive-module-year archive-module-year-hidden" data-year="2021">
+              <div class="archive-module-button">
+                <span class="archive-module-hide-button">▼</span>
+                <span class="archive-module-show-button">▶</span>
+              </div>
+              <a href="https://juu7g.hatenablog.com/archive/2021" class="archive-module-year-title archive-module-year-2021">
+                2021
+              </a>
+              <ul class="archive-module-months">
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/12" class="archive-module-month-title archive-module-month-2021-12">
+                      2021 / 12
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/11" class="archive-module-month-title archive-module-month-2021-11">
+                      2021 / 11
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/10" class="archive-module-month-title archive-module-month-2021-10">
+                      2021 / 10
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/09" class="archive-module-month-title archive-module-month-2021-9">
+                      2021 / 9
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/08" class="archive-module-month-title archive-module-month-2021-8">
+                      2021 / 8
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/07" class="archive-module-month-title archive-module-month-2021-7">
+                      2021 / 7
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/06" class="archive-module-month-title archive-module-month-2021-6">
+                      2021 / 6
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/05" class="archive-module-month-title archive-module-month-2021-5">
+                      2021 / 5
+                    </a>
+                  </li>
+                
+                  <li class="archive-module-month">
+                    <a href="https://juu7g.hatenablog.com/archive/2021/04" class="archive-module-month-title archive-module-month-2021-4">
+                      2021 / 4
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    
+    
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+  
+<footer id="footer" data-brand="hatenablog">
+  <div id="footer-inner">
+    
+      <div style="display:none !important" class="guest-footer js-guide-register test-blogs-register-guide" data-action="guide-register">
+  <div class="guest-footer-content">
+    <h3>はてなブログをはじめよう！</h3>
+    <p>juu7gさんは、はてなブログを使っています。あなたもはてなブログをはじめてみませんか？</p>
+    <div class="guest-footer-btn-container">
+      <div  class="guest-footer-btn">
+        <a class="btn btn-register js-inherit-ga" href="https://blog.hatena.ne.jp/register?via=200227" target="_blank">はてなブログをはじめる（無料）</a>
+      </div>
+      <div  class="guest-footer-btn">
+        <a href="https://hatena.blog/guide" target="_blank">はてなブログとは</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <address class="footer-address">
+      <a href="https://juu7g.hatenablog.com/">
+        <img src="https://cdn.image.st-hatena.com/image/square/885f46ea75e7fea0cca36df20380c174432bd903/backend=imagemagick;height=128;version=1;width=128/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fblog_custom_icon%2F158185293%2F1618361397151959" width="16" height="16" alt="プログラムでおかえしできるかな"/>
+        <span class="footer-address-name">プログラムでおかえしできるかな</span>
+      </a>
+    </address>
+    <p class="services">
+      Powered by <a href="https://hatena.blog/">Hatena Blog</a>
+      |
+        <a href="https://blog.hatena.ne.jp/-/abuse_report?target_url=https%3A%2F%2Fjuu7g.hatenablog.com%2Fentry%2FPython%2Fblog%2Fnotion-api" class="report-abuse-link test-report-abuse-link" target="_blank">ブログを報告する</a>
+    </p>
+  </div>
+</footer>
+
+
+  
+
+  
+  <script async src="https://s.hatena.ne.jp/js/widget/star.js"></script>
+  
+  
+  <script>
+    if (typeof window.Hatena === 'undefined') {
+      window.Hatena = {};
+    }
+    if (!Hatena.hasOwnProperty('Star')) {
+      Hatena.Star = {
+        VERSION: 2,
+      };
+    }
+  </script>
+
+
+  
+  
+
+<div class="quote-box">
+  <div class="tooltip-quote tooltip-quote-stock">
+    <i class="blogicon-quote" title="引用をストック"></i>
+  </div>
+  <div class="tooltip-quote tooltip-quote-tweet js-tooltip-quote-tweet">
+    <a class="js-tweet-quote" target="_blank" data-track-name="quote-tweet" data-track-once>
+      <img src="https://cdn.blog.st-hatena.com/images/admin/quote/quote-x-icon.svg?version=b6dfa13fdd3db0041337cff8e11dda" title="引用して投稿する" >
+    </a>
+  </div>
+</div>
+
+<div class="quote-stock-panel" id="quote-stock-message-box" style="position: absolute; z-index: 3000">
+  <div class="message-box" id="quote-stock-succeeded-message" style="display: none">
+    <p>引用をストックしました</p>
+    <button class="btn btn-primary" id="quote-stock-show-editor-button" data-track-name="curation-quote-edit-button">ストック一覧を見る</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="message-box" id="quote-login-required-message" style="display: none">
+    <p>引用するにはまずログインしてください</p>
+    <button class="btn btn-primary" id="quote-login-button">ログイン</button>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="quote-stock-failed-message" style="display: none">
+    <p>引用をストックできませんでした。再度お試しください</p>
+    <button class="btn quote-stock-close-message-button">閉じる</button>
+  </div>
+
+  <div class="error-box" id="unstockable-quote-message-box" style="display: none; position: absolute; z-index: 3000;">
+    <p>限定公開記事のため引用できません。</p>
+  </div>
+</div>
+
+<script type="x-underscore-template" id="js-requote-button-template">
+  <div class="requote-button js-requote-button">
+    <button class="requote-button-btn tipsy-top" title="引用する"><i class="blogicon-quote"></i></button>
+  </div>
+</script>
+
+
+
+  
+  <div id="hidden-subscribe-button" style="display: none;">
+    <div class="hatena-follow-button-box btn-subscribe js-hatena-follow-button-box"
+  
+  >
+
+  <a href="#" class="hatena-follow-button js-hatena-follow-button">
+    <span class="subscribing">
+      <span class="foreground">読者です</span>
+      <span class="background">読者をやめる</span>
+    </span>
+    <span class="unsubscribing" data-track-name="profile-widget-subscribe-button" data-track-once>
+      <span class="foreground">読者になる</span>
+      <span class="background">読者になる</span>
+    </span>
+  </a>
+  <div class="subscription-count-box js-subscription-count-box">
+    <i></i>
+    <u></u>
+    <span class="subscription-count js-subscription-count">
+    </span>
+  </div>
+</div>
+
+  </div>
+
+    
+
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+<script type="text/javascript" src="https://cdn.blog.st-hatena.com/js/external/jquery.min.js?v=1.12.4&amp;version=b6dfa13fdd3db0041337cff8e11dda"></script>
+
+
+
+
+
+
+
+<script src="https://cdn.blog.st-hatena.com/js/texts-ja.js?version=b6dfa13fdd3db0041337cff8e11dda"></script>
+
+
+
+  <script id="vendors-js" data-env="production" src="https://cdn.blog.st-hatena.com/js/vendors.js?version=b6dfa13fdd3db0041337cff8e11dda" crossorigin="anonymous"></script>
+
+<script id="hatenablog-js" data-env="production" src="https://cdn.blog.st-hatena.com/js/hatenablog.js?version=b6dfa13fdd3db0041337cff8e11dda" crossorigin="anonymous" data-page-id="entry"></script>
+
+
+  <script>Hatena.Diary.GlobalHeader.init()</script>
+
+
+
+
+
+
+
+
+
+    
+  <script id="valve-dmp" data-service="blog" src="https://cdn.pool.st-hatena.com/valve/dmp.js" data-test-id="dmpjs" async></script>
+
+
+    
+
+
+
+
+
+  </body>
+</html>
+
