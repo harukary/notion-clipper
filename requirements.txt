@@ -1,4 +1,5 @@
-fastapi==0.104.1
+fastapi
 requests
 beautifulsoup4
 openai
+notion-client
