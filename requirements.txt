@@ -1,0 +1,11 @@
+ipykernel
+ipywidgets
+python-dotenv
+notion-client
+beautifulsoup4
+openai
+langchain
+langchain_openai
+langchain_community
+unstructured
+selenium
